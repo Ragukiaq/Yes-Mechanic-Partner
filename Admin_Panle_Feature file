@@ -1,0 +1,153 @@
+Feature: Verify the partner Admin in Yes Mechanic application
+
+Scenario: Validate the login page in Admin panel
+	Given Admin launch the application
+	Then Admin click the login button
+	
+Scenario: Admin navigates to Service Requests page and validate the funtionalitys
+	Given Admin click the service request button
+	When Admin scrollup to see the service requests on service page
+	And Admin the click the Assigned button
+	Then Admin scrollup to see the available partners list and admin assign the work
+	
+Scenario: Admin navigates to Schedule Requests page and validate the funtionalitys
+	Given Admin click the schedule request button
+	When Admin the click the schedule button on the top of the right corner
+	Then Admin click the back to schedule request button on schedule page
+	
+Scenario: Admin navigates to Orders page and validate the funtionalitys
+	Given Admin click the Orders button on the admin page
+	When Admin scrollup to see the Orders list
+	And Admin the click the view button to see the orders details
+	And Admin click save button to update the order
+	And Admin click complete order button on order page
+	And Admin scrollup see the complte orders detail
+	Then Admin click the back to schedule request button on orders page
+	
+	
+
+Scenario: Admin validate the partner funtionality on the admin panel
+	Given Admin click the partner button on the admin page
+	When Admin scroll up to see the partners details
+	And Admin click the view button on the on partner profile to see partners details
+	Then Admin able to click profile back button and back to the partners page
+	
+
+Scenario: Admin validate the partner profile edit profile functionality
+	Given Admin click the edit profile button in the parts page
+	When Admin able to modify the partner first name in first name field
+	And Admin able to modify the partner last name in last name field
+	And Admin able to modify the company name in company name field
+	And Admin able to modify the address in address field1
+	And Admin able to modify the address in address field2
+	And Admin able to modify the state in state field
+	And Admin able to modify the city in citi field
+	And Admin able to modify the PIN code in PIN code field
+	And Admin able to modify the Aadhar No in Aadhar No field
+	And Admin able to modify the PAN Card in pan card field
+	And Admin able to modify the GST No in gst number field
+	And Admin able to modify the Registration No in registration No field
+	And Admin able to modify the login email id in email No field
+	And Admin click the save change button
+	Then Admin able to click profile back button
+	
+Scenario: Admin validate the add partner functionality on partners page
+	Given Admin click the Add button on partners page
+	When Admin able to enter the partner first name in first name field
+	And Admin able to enter the partner last name in last name field
+	And Admin able to enter the company name in company name field
+	And Admin able to enter the mobilenumber in mobile number field
+	And Admin able to enter the PIN code in PIN code field
+	And Admin able to enter the address in address field1
+	And Admin able to enter the address in address field2
+	And Admin able to enter the state in state field
+	And Admin able to enter the city in citi field
+	And Admin able to enter the Registration No in registration No field
+	And Admin able to enter the Aadhar No in Aadhar No field
+	And Admin able to enter the PAN Card in pan card field
+	And Admin able to enter the GST No in gst number field
+	And Admin able to enter the partn email id in email id field
+	And Admin able to enter the password in password fiel
+	Then Admin able to click Register button
+	
+Scenario: Admin validate the jobs cards on partners page
+	Given Admin click the jobs cards menu button
+	When Admin click the history button tp Completed Jobs detail 
+	And Adim click the view button to see Job Card Details
+	And Admin view the details to close the details page
+	Then Admin click the back button on the Completed Jobs 
+	
+Scenario: Admin validate the city functionality on partners page
+	Given Admin click the city menu button
+	When Admin click the add city button to add the city
+	And Admin enter the city name in city name field
+	And Admin enter the city PIN code  in PIN code field
+	And Admin click the save button to save the new city
+	Then Admin able to view and delete the city
+
+Scenario: Admin validate the Vehicle Management functionality on partners page
+	Given Admin click the Vehicle menu button
+	Then Admin able to search the vechile detail on search filed
+	
+Scenario: Admin validate the SOS functionality on partners page
+	Given Admin click the SOS menu button
+	When Admin click all button to see all SOS requests
+	And Admin click not started button to see SOS requests
+	And Admin click inprogress button to see SOS requests
+	Then Admin click completed button to see SOS requests
+	
+Scenario: Admin validate the add new and delete service functionality on partners page
+	Given Admin click the add SOS service button
+	When Admin able to enter the service name
+	And Admin able to click the service type using respective image
+	Then Admin able to click the add service button to add the service
+	
+Scenario: Admin validate the Enquiry functionality
+	Given Admin click the enquiry button
+	When Admin able click the all button in enquiry page
+	And Admin able click the unread button in enquiry page
+	Then Admin able click the read button in enquiry page
+
+Scenario: Admin validate the Customer Directory functionality
+	Given Admin click the Customer button
+	When Admin click the filter button on Customer Directory page
+	And Admin able click the all button in filte page
+	And Admin able click the active button in filte page
+	And Admin able click the inactive button in filte page
+	Then Admin click the view button to customer service hoistory details
+	
+Scenario: Admin validate the Settings functionality
+	Given Admin click the settings button
+	When Admin click edit option to edit the admin profile
+	And Admin able to modify the First Name field
+	And Admin able to modify the Last Name field	
+	And Admin able to modify the Email field
+	Then Admin click the update button to save the modification
+	
+Scenario: Admin validate the Announcement functionality
+	Given Admin click the Announcement button
+	When Admin click the add offer button to add the offer
+	And Admin able to enter the heading of the offer
+	And Admin able to enter the description of the offer
+	And Admin able to enter the offer price
+	And Admin able to click the submit button
+	And Admin ableto click the addoffer close button
+	And Admin able to edit the offer using edit option
+	And Admin able to edit the offer details
+	And Admin able to click the update button
+	And Admin ableto click the close button
+	And Admin able to delete the offer using delete option
+	Then Admin select  delete button to delete the offer
+	
+	
+Scenario: Admin validate the notification functionality
+	Given Admin click the notificaion button
+	When Admin able click the all button in notification page
+	And Admin able click the read button in notification page
+	Then Admin able click the unread button in notification page
+	
+Scenario: Admin validate the logout functionality
+ 	Given Admin click the logout option on the top of the right corner
+ 	When Admin click the logout button
+ 	Then Admin able to click the ok button on the logout page
+	

@@ -1,0 +1,362 @@
+package com.Step_Definition;
+
+import com.Base_Class.Base_Class;
+import com.Pom_Class.Login;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+public class Step_Def extends Base_Class{
+	
+	Login lg = new Login(driver);
+	
+	//-------- Partner panel login
+	
+	@Given("Partner launch the application")
+	public void partner_launch_the_application() {
+		getUrl("https://sms-partnerpannel.netlify.app/login");
+	    
+	}
+	@When("Partner enter the email id in email id field")
+	public void partner_enter_the_email_id_in_email_id_field() {
+		
+		SendKeys(lg.getEmail(), "pqrs@gmail.com");
+	    
+	}
+	@When("Partner enter the password in password field")
+	public void partner_enter_the_password_in_password_field() {
+		SendKeys(lg.getPassword(), "Pqrs@123");
+	    
+	}
+	@Then("Partner click the login button")
+	public void partner_click_the_login_button() {
+		clicktheelement(lg.getLogin());
+	}
+	
+	////Partner in Spare Parts Page
+
+/*	@Given("the user is on the Home page")
+	public void the_user_is_on_the_home_page() {
+		System.out.println("Partner in home page");
+		
+	}
+	@When("the user clicks on the {string} option")
+	public void the_user_clicks_on_the_option(String string) {
+		waitimplecit();
+		clicktheelement(lg.getSpareparts());
+		
+	}
+	@When("the user scrolls up to view available spare parts")
+	public void the_user_scrolls_up_to_view_available_spare_parts() {
+		Scrollup();
+	    
+	}
+	@Then("the list of available spare parts should be displayed")
+	public void the_list_of_available_spare_parts_should_be_displayed() {
+		Isdisplayed(lg.getDetails());
+	    
+	} */
+	
+	/// Partner in spare parts page in add category funtion
+
+	/*	@Given("Partner able to click the \"Add Catagory\"button")
+	public void partner_able_to_click_the_add_catagory_button() {
+		clicktheelement(lg.getAddcategory1());
+	    
+	}
+	@When("Partner enter the product Catagory in catagory field")
+	public void partner_enter_the_product_catagory_in_catagory_field() {
+		SendKeys(lg.getInputuproduct(), "kia");
+	    
+	}
+	@Then("Partner click the \"Add Catagory\"to added the product suessfully")
+	public void partner_click_the_add_catagory_to_added_the_product_suessfully() {
+		clicktheelement(lg.getAddcategory2());
+	    
+	}  */
+	
+	//-------- Partner in Add new product page in spare parts
+	
+ /*	@Given("Partner able to click the {string} button")
+	public void partner_able_to_click_the_button(String string) {
+		clicktheelement(lg.getAddnewproduct());
+	}
+	@When("Partner enter the {string} in product name field")
+	public void partner_enter_the_in_product_name_field(String string) {
+		SendKeys(lg.getProductname(), "Light");
+	}
+	@When("Partner enter the {string} in image url field")
+	public void partner_enter_the_in_image_url_field(String string) {
+		SendKeys(lg.getImageurl(), "www.image.url.com");
+	}
+	@When("Partner enter the {string} of the poduct in price field")
+	public void partner_enter_the_of_the_poduct_in_price_field(String string) {
+		SendKeys(lg.getPrice(), "800");
+	}
+	@When("Partner enter the {string} in quantity required field")
+	public void partner_enter_the_in_quantity_required_field(String string) {
+		SendKeys(lg.getQuantity(), "50");
+		
+	}
+	@When("Partner able to selcet the Units of the product usig dropdown")
+	public void partner_able_to_selcet_the_units_of_the_product_usig_dropdown() {
+		selecttheindex(lg.getUntis(), 3);
+	}
+	@When("Partner able to selcet the Category of the product usig dropdown")
+	public void partner_able_to_selcet_the_category_of_the_product_usig_dropdown() {
+		selecttheindex(lg.getCategory(), 4);
+	    
+	}
+	@When("Partner enter the {string} in brand field")
+	public void partner_enter_the_in_brand_field(String string) {
+		SendKeys(lg.getBrand(), "Phlipse");
+	    
+	}
+	@When("Partner enter the {string} in warrenty field")
+	public void partner_enter_the_in_warrenty_field(String string) {
+		SendKeys(lg.getWarranty(), "01 Year");
+	    
+	}
+	@Then("Partner click the {string} button")
+	public void partner_click_the_button(String string) {
+		clicktheelement(lg.getAddproduct());
+	    
+	}  */
+	
+	///----Partner in Job card element
+	
+	/*	@Given("Partner able to click the Jobcards button")
+	public void partner_able_to_click_the_jobcards_button() {
+		waitimplecit();
+		clicktheelement(lg.getJobcards());
+	}
+	@When("Partner scrollup to see the jobcards details")
+	public void partner_scrollup_to_see_the_jobcards_details() {
+		Scrollup();
+	}
+	@When("Partner able to click the history button")
+	public void partner_able_to_click_the_history_button() {
+		clicktheelement(lg.getHistory());
+	}
+	@Then("Patner scrollup to see the completed booking details")
+	public void patner_scrollup_to_see_the_completed_booking_details() {
+		Scrollup();
+	} */
+
+	//----// Partner in Service request page
+	
+ /*	@Given("Partner click the service request button")
+	public void partner_click_the_service_request_button() {
+		waitimplicit();
+		clicktheelement(lg.getService());
+	}
+	@Then("Partner scrollup the page and see the service request details")
+	public void partner_scrollup_the_page_and_see_the_service_request_details() {
+		Scrollup();
+	} */
+	
+	////== Partner in service category page (add category)
+	
+	/* @Given("Partner able to click the service catalog page button")
+	public void partner_able_to_click_the_service_catalog_page_button() {
+		waitimplecit();
+		clicktheelement(lg.getServiceCat());
+	}
+	@When("Partner able to click the add category button")
+	public void partner_able_to_click_the_add_category_button() {
+		clicktheelement(lg.getAddcat());
+	}
+	@When("Partner enter the category name in category field")
+	public void partner_enter_the_category_name_in_category_field() {
+		SendKeys(lg.getCatname(), "heavy");
+	}
+	@When("Partner able to select the checkbox")
+	public void partner_able_to_select_the_checkbox() {
+		clicktheelement(lg.getCheckbox());
+	}
+	@Then("Partner click the Add Catagoryto added the product suessfully")
+	public void partner_click_the_add_catagoryto_added_the_product_suessfully() {
+		clicktheelement(lg.getAddcatbutton());
+	}  */
+
+	////Add service in service catalog 
+	
+	/* @Given("Partner click the add service click button")
+	public void partner_click_the_add_service_click_button() {
+		waitimplecit();
+		clicktheelement(lg.getAddservicebutton());
+	}
+	@When("Partner enter the serive name im serive name field")
+	public void partner_enter_the_serive_name_im_serive_name_field() {
+		SendKeys(lg.getSername(), "body");
+	}
+	@When("Partner enter the price of the product in price field")
+	public void partner_enter_the_price_of_the_product_in_price_field() {
+		waitimplecit();
+		SendKeys(lg.getSerprice(), "100");
+	}
+	@When("Partner enter the duration of service in duration field")
+	public void partner_enter_the_duration_of_service_in_duration_field() {
+		SendKeys(lg.getSerduration(), "02 hours");
+	}
+	@When("Partner able to select the select")
+	public void partner_able_to_select_the_select() {
+		waitimplecit();
+		selecttheindex(lg.getSercategory(), 0);
+
+	}
+	@When("Partner enter the service description in description page")
+	public void partner_enter_the_service_description_in_description_page() {
+		SendKeys(lg.getSerdes(), "The service has been done today");
+	}
+	@When("Partner able to click the checkbox")
+	public void partner_able_to_click_the_checkbox() {
+		clicktheelement(lg.getSercheck());
+	}
+	@Then("Partner able to click the add service button")
+	public void partner_able_to_click_the_add_service_button() {
+		clicktheelement(lg.getAddserbutton());
+	} */
+	
+	////---------// Billing
+	
+	/* @Given("Partner able to click the billing button")
+	public void partner_able_to_click_the_billing_button() {
+		waitimplecit();
+		clicktheelement(lg.getBilling());
+	}
+	@When("Parter scrollup to see the billing details")
+	public void parter_scrollup_to_see_the_billing_details() {
+		Scrollup();
+	}
+	@When("Partner able to click the billing histoy button")
+	public void partner_able_to_click_the_billing_histoy_button() {
+		clicktheelement(lg.getBillinghistory());
+	}
+	@Then("Parter scrollup to see the history details")
+	public void parter_scrollup_to_see_the_history_details() {
+		Scrollup();
+	} */
+	
+ ///-----------// Settings
+	@Given("Partner able click the setting button")
+	public void partner_able_click_the_setting_button() {
+		waitimplecit();
+		clicktheelement(lg.getSettings());
+	}
+	@When("Partner scroll to see the settings details")
+	public void partner_scroll_to_see_the_settings_details() {
+		Scrollupanddown(lg.getScroll());
+	}
+	@When("Partner able to click the aboutus button")
+	public void partner_able_to_click_the_aboutus_button() {
+		clicktheelement(lg.getAboutus());
+	}
+	@Then("Partner scrollup to see the profile setting details")
+	public void partner_scrollup_to_see_the_profile_setting_details() {
+		Scrollupanddown(lg.getScrollend());
+		
+	}
+	///------------// Announcement
+	
+	@Given("Partner click the announcement button")
+	public void partner_click_the_announcement_button() {
+		waitimplecit();
+		clicktheelement(lg.getAnnouncement());
+	}
+	@When("Partner able to click the All button in announcement page")
+	public void partner_able_to_click_the_all_button_in_announcement_page() {
+		clicktheelement(lg.getAnnouceall());
+	}
+	
+	@When("Partner able to click the General button in announcement page")
+	public void partner_able_to_click_the_general_button_in_announcement_page() {
+		clicktheelement(lg.getAnnoucegenrl());
+	}
+	@When("Partner able to click the Offeres button in announcement page")
+	public void partner_able_to_click_the_offeres_button_in_announcement_page() {
+		clicktheelement(lg.getAnnounceoffers());
+	}
+	@When("Partner able to click the Services button in announcement page")
+	public void partner_able_to_click_the_services_button_in_announcement_page() {
+		clicktheelement(lg.getAnnounceservice());
+	}
+
+	///----------//Enquiry
+	
+	@Given("Partner able to click the enquiry button")
+	public void partner_able_to_click_the_enquiry_button() {
+		waitimplecit();
+		clicktheelement(lg.getEnquirybutton());
+	}
+	@When("Partner enter the name in enquiry field")
+	public void partner_enter_the_name_in_enquiry_field() {
+		SendKeys(lg.getEnquiryname(), "Service");
+	}
+	@When("Partner enter the mobile number in mobile number field")
+	public void partner_enter_the_mobile_number_in_mobile_number_field() {
+		SendKeys(lg.getEnquirymobilenumber(), "7655558768");
+	}
+	@When("Partner enter the issue description in enquiry description field")
+	public void partner_enter_the_issue_description_in_enquiry_description_field() {
+		SendKeys(lg.getEnquirydes(), "Hi hello welcome");
+	}
+	@Then("Partner able to click the submit button in enquiry field")
+	public void partner_able_to_click_the_submit_button_in_enquiry_field() {
+		clicktheelement(lg.getSubmitenquiry());
+	}
+	
+	/////////-------// notification
+	
+	@Given("partner click the notificaion button")
+	public void partner_click_the_notificaion_button() {
+		waitimplecit();
+		clicktheelement(lg.getNotificationbutton());
+	}
+	@When("partnet able click the all button in notification page")
+	public void partnet_able_click_the_all_button_in_notification_page() {
+		clicktheelement(lg.getAllnotification());
+	}
+	@When("Partner scrollup see the avilable notification")
+	public void partner_scrollup_see_the_avilable_notification() {
+		Scrollup();
+	}
+	@When("partnet able click the unread button in notification page")
+	public void partnet_able_click_the_unread_button_in_notification_page() {
+		clicktheelement(lg.getUnreadnoti());
+	}
+	@When("partnet able click the read button in notification page")
+	public void partnet_able_click_the_read_button_in_notification_page() {
+		clicktheelement(lg.getReadnotification());
+	}
+	@Then("Partner scrollup see the avilable read notification")
+	public void partner_scrollup_see_the_avilable_read_notification() {
+		Scrollup();
+	} 
+	
+	////logout
+
+ /*	@Given("Partner click the logout button on the top of the right corner")
+	public void partner_click_the_logout_button_on_the_top_of_the_right_corner() {
+		waitimplicit();
+		clicktheelement(lg.getLogoutbutton());
+	}	
+	@Then("partnet able to click the ok button on the logout page")
+	public void partnet_able_to_click_the_ok_button_on_the_logout_page() {
+		clicktheelement(lg.getLogout_ok());
+		
+	}  */
+	
+
+	
+	
+
+
+
+	
+
+
+
+
+}

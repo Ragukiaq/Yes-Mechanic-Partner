@@ -1,0 +1,106 @@
+Partner Panel:
+Feature File:
+    Feature: Verify the partner panel in Yes Mechanic application
+Scenario: Validate the login page in partner panel
+	Given Partner launch the application
+	When Partner enter the email id in email id field
+	And Partner enter the password in password field
+	Then Partner click the login button
+
+Scenario: User navigates to Spare Parts section and views available items
+    Given the user is on the Home page
+    When the user clicks on the "Spare Parts" option 
+    And the user scrolls up to view available spare parts
+    Then the list of available spare parts should be displayed
+    
+Scenario: Partner validate the add category
+	Given Partner able to click the "Add Catagory"button 
+	When Partner enter the product Catagory in catagory field 
+	Then Partner click the "Add Catagory"to added the product suessfully
+
+Scenario: Partner validate the add new product product futionaliy
+Given Partner able to click the "Add New Product" button
+	When Partner enter the "Product Name" in product name field
+	And Partner enter the "Image URL" in image url field
+	And Partner enter the "Price" of the poduct in price field
+	And Partner enter the "Stock Quantity" in quantity required field
+	And Partner able to selcet the Units of the product usig dropdown
+	And Partner able to selcet the Category of the product usig dropdown
+	And Partner enter the "Brand" in brand field
+	And Partner enter the "Warranty Period" in warrenty field
+	Then Partner click the "Add Product" button
+
+Scenario: Partner validate the service booking page futionality
+	Given Partner able to click the Jobcards button
+	When Partner scrollup to see the jobcards details
+	And Partner able to click the history button
+	Then Patner scrollup to see the completed booking details 
+
+Scenario: Partner navigate to the service request page and validate futionality
+	Given Partner click the service request button
+	Then Partner scrollup the page and see the service request details
+
+Scenario: Partner navigate to the service catalog page and validate futionality
+	Given Partner able to click the service catalog page button
+	When Partner able to click the add category button
+	And Partner enter the category name in category field
+	And Partner able to select the checkbox 
+	Then Partner click the Add Catagoryto added the product suessfully
+	
+Scenario: Partner validate the add service on service catalog page
+	Given Partner click the add service click button
+	When Partner enter the serive name im serive name field
+	And Partner enter the price of the product in price field
+	And Partner enter the duration of service in duration field
+	And Partner able to select the select
+	And Partner enter the service description in description page
+	And Partner able to click the checkbox
+	Then Partner able to click the add service button
+	
+Scenario: Partner validate the Billing functionality
+	Given Partner able to click the billing button
+	When Parter scrollup to see the billing details
+	And Partner able to click the billing histoy button
+	Then Parter scrollup to see the history details
+
+Scenario: Partner validate the setting functionality
+	Given Partner able click the setting button
+	When Partner scroll to see the settings details
+	And Partner able to click the aboutus button
+	Then Partner scrollup to see the profile setting details
+	
+Scenario: Partner validate the announcement functionality
+	Given Partner click the announcement button
+	When Partner able to click the All button in announcement page
+	And Partner able to click the General button in announcement page
+	And Partner able to click the Offeres button in announcement page
+	And Partner able to click the Services button in announcement page
+	
+Scenario: Partner validate the Enquiry functionality
+	Given Partner able to click the enquiry button
+	When Partner enter the name in enquiry field
+	And Partner enter the mobile number in mobile number field
+	And Partner enter the issue description in enquiry description field
+	Then Partner able to click the submit button in enquiry field
+
+Scenario: Partner validate the notification functionality
+	Given partner click the notificaion button
+	When partnet able click the all button in notification page
+	And Partner scrollup see the avilable notification
+	And partnet able click the unread button in notification page
+	And partnet able click the read button in notification page
+	Then Partner scrollup see the avilable read notification
+
+
+ Scenario: Partner validate the logout functionality
+ 	Given Partner click the logout button on the top of the right corner
+ 	Then partnet able to click the ok button on the logout page
+
+
+
+	
+	
+	
+
+
+

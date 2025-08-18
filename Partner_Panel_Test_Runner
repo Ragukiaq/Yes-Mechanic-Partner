@@ -1,0 +1,45 @@
+package com.Test_Runner;
+
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.runner.RunWith;
+import org.openqa.selenium.WebDriver;
+
+import com.Base_Class.Base_Class;
+
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
+
+	@CucumberOptions (features = "C:\\Users\\Lenevo\\eclipse-workspace\\Partnerr\\src\\test\\java\\com\\featurefile\\Partner.feature", glue = "com.Step_Definition",
+			plugin = {"pretty", "html:target/html/repot.html"})
+	
+	@RunWith (Cucumber.class)
+	
+public class Test_Class extends Base_Class{
+		
+		static WebDriver driver;
+		
+		
+		@BeforeClass
+			public static void browserlaunch() {
+			driver= Base_Class.Browser_lauch();
+			maximize();
+
+
+
+		}
+		
+		@AfterClass
+		public static void end() throws InterruptedException {
+			
+			Thread.sleep(3000);
+			
+			//driver.close();
+
+		}
+		
+		
+		
+	}
+	
+

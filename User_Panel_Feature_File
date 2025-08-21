@@ -1,0 +1,97 @@
+Feature: Verify the user panel in Yes Mechanic application
+Scenario: Validate the login page in user panel
+	Given User launch the application
+	When User enter the mobile number in mobilenumber id field
+	And User click the login button
+	And User enter the otp "OTP 123456" otp verify page
+	Then User click the Verify OTP button
+
+Scenario: User verify the hoem funtionality on the user panel
+	Given User click the home button on the user panel
+	When User scrollup to see the Available Services and Available Spare Parts on home page
+	Then User scroll end of the page to see the home page details
+	
+Scenario: User verify the Service funtionality on the user panel
+	Given User click the service menu button on user panel
+	When User click the enginee type button
+	And User click the Add to Card button to add the service
+	And User selce General service button
+	And User able to select the car using dropdown option
+	And User click the Book Now button to booking the service
+	And User click go to card button to navigate booking card page
+	Then User click the place order button to placed the order
+	
+Scenario: User verify the available Services on service page
+	Given User click the enginee menu button
+	When User click the parts service button
+	And User click the welcome service button
+	Then User click the ASC service button
+	
+Scenario: User verify the Spare Parts on user panel
+	Given User click the Spare Parts menu on user panel
+	When User scrollupto selct the addtocart button 
+	And  User scroll to click the next button on the Our Bundle.
+	And User scroll to Categories and select the Engine button 
+	And User selcet the addtocart button to add the product 
+	Then User click the back to the button on the page
+	
+Scenario: User verify the Booking Cart funtionality on service page
+	Given User click the booking cart menu button
+	When User click spare parts orders button on cart page
+	And User able to click the remove the order using remove option 
+	Then User click the placed order button to place the order
+	
+Scenario: User verify the Bookings funtionality on user panel
+	Given User clikc the Bookings menu button
+	When User click the all order option to see all orders
+	And User click spare parts option to see spare parts orders
+	And User click service option to see service requets
+	Then User click view button to see orders details
+	
+Scenario: User verify the Offers funtionality on user panel
+	Given User click the Offers menu button
+	Then User scrollupto see the avilable offers details
+	
+Scenario: User verify the enquiry funtionality on user panel
+	Given User click the enquiry menu button
+	When User able to enter the car model in car model field
+	And User ableto select the serive type using dropdown
+	And User able to enter the service date in date field
+	And User enter the enquiry in your enquiry field
+	Then User able to click the submit button 
+	
+Scenario: User validate the notification functionality
+	Given User click the notificaion menu
+	When User able to click view all notification button 
+	And User able click the all button in notification page
+	And User able click the unread button in notification page
+	Then User able click the read button in notification page
+	
+Scenario: User validate the profile functionality
+	Given User click the profilemenu button
+	When User click the profile button inside the profile
+	And User able to click the edit button to edit the profile details
+	And User click the car detail button to add or edit the car details
+	And User click the add another car buuton to add the car details
+	And User able to enter Car Registration num on the Car Registration num field
+	And User able to enter the Car Model in add Car Model field
+	And User able to enter the Car Company in Car company field
+	And User able to enter the Car Year in Car Year field
+	And User able to enter the Car Fuel Type in Car Fuel field
+	Then User click Save button to save the car details	
+	
+Scenario: User validate the settings funtionality on the profile page
+	Given User click the Profile button on the top of th eright corner
+	When User click the settings button inside the profile
+	And User click the About us button in settings page
+	And User click the Privacy Policy button in settings page 
+	Then User click the Terms&Condition button in settings page
+
+Scenario: User validate the logout funtionality on the profile page
+	Given User click the Profile button on the top of th eright corner2
+	When User click the LogOut button inside the profile
+	Then User click the OK button to logout the application
+	
+
+
+	

@@ -1,0 +1,694 @@
+package com.Pom_Class;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class User_login {
+	
+	WebDriver driver;
+
+	public User_login(WebDriver driver3) {
+			this.driver = driver3;
+			PageFactory.initElements(driver3, this);
+		
+	}
+	
+	@FindBy(xpath="//*[@placeholder=\"Enter your phone number\"]")
+	WebElement phonenumber;
+	public WebDriver getDriver() {
+		return driver;
+	}
+
+	public void setDriver(WebDriver driver) {
+		this.driver = driver;
+	}
+
+	public WebElement getPhonenumber() {
+		return phonenumber;
+	}
+
+	public void setPhonenumber(WebElement phonenumber) {
+		this.phonenumber = phonenumber;
+	}
+
+	public WebElement getLoginbutton() {
+		return loginbutton;
+	}
+
+	public void setLoginbutton(WebElement loginbutton) {
+		this.loginbutton = loginbutton;
+	}
+	@FindBy(xpath="//*[@id=\"root\"]/div[1]/div/main/div/div/div/form/button")
+	WebElement loginbutton;
+	@FindBy(xpath="//*[@id=\"root\"]/div[1]/div/main/div/div/div/form/div/button")
+	WebElement OTPverify;
+
+	public WebElement getOTPverify() {
+		return OTPverify;
+	}
+
+	public void setOTPverify(WebElement oTPverify) {
+		OTPverify = oTPverify;
+	}
+	@FindBy(css="div.flex.justify-between.space-x-2 input")
+	WebElement otpfiled;
+	
+	//home
+	
+	@FindBy(xpath="//*[@href=\"/\"]")
+	WebElement homemenu;
+	public WebElement getOtpfiled() {
+		return otpfiled;
+	}
+
+	public void setOtpfiled(WebElement otpfiled) {
+		this.otpfiled = otpfiled;
+	}
+
+	public WebElement getHomemenu() {
+		return homemenu;
+	}
+
+	public void setHomemenu(WebElement homemenu) {
+		this.homemenu = homemenu;
+	}
+
+	public WebElement getScrollendofthepage() {
+		return scrollendofthepage;
+	}
+
+	public void setScrollendofthepage(WebElement scrollendofthepage) {
+		this.scrollendofthepage = scrollendofthepage;
+	}
+
+	@FindBy(xpath="//*[@id=\"root\"]/div[1]/div/main/div/div[2]/footer/div/div[2]/div[3]/ol/a[3]")
+	WebElement scrollendofthepage;
+	
+	//// Service
+	
+	
+	@FindBy(xpath="//*[@href=\"/services\"]")
+	WebElement servicemenu;
+
+	public WebElement getServicemenu() {
+		return servicemenu;
+	}
+
+	public void setServicemenu(WebElement servicemenu) {
+		this.servicemenu = servicemenu;
+	}
+	@FindBy(xpath="//*[@id=\"root\"]/div[1]/div/main/div/div/div[2]/div/div[2]/div[1]/div/div[2]/div[3]/div[2]/button")
+	WebElement addtocart;
+
+	public WebElement getAddtocart() {
+		return addtocart;
+	}
+
+	public void setAddtocart(WebElement addtocart) {
+		this.addtocart = addtocart;
+	}
+	@FindBy(xpath="/html/body/div[1]/div[1]/div/main/div/div/div[1]/div/div[2]/nav/div/div[1]")
+	WebElement servicetype;
+
+	public WebElement getServicetype() {
+		return servicetype;
+	}
+
+	public void setServicetype(WebElement servicetype) {
+		this.servicetype = servicetype;
+	}
+	@FindBy(xpath="//*[@id=\"cars\"]")
+	WebElement addcars;
+	public WebElement getAddcars() {
+		return addcars;
+	}
+
+	public void setAddcars(WebElement addcars) {
+		this.addcars = addcars;
+	}
+
+	public WebElement getBooknowbutton() {
+		return booknowbutton;
+	}
+
+	public void setBooknowbutton(WebElement booknowbutton) {
+		this.booknowbutton = booknowbutton;
+	}
+
+	public WebElement getGeneralservice() {
+		return generalservice;
+	}
+
+	public void setGeneralservice(WebElement generalservice) {
+		this.generalservice = generalservice;
+	}
+
+	public WebElement getGotocartbutton() {
+		return gotocartbutton;
+	}
+
+	public void setGotocartbutton(WebElement gotocartbutton) {
+		this.gotocartbutton = gotocartbutton;
+	}
+
+	public WebElement getPlaceorderservicebutton() {
+		return placeorderservicebutton;
+	}
+
+	public void setPlaceorderservicebutton(WebElement placeorderservicebutton) {
+		this.placeorderservicebutton = placeorderservicebutton;
+	}
+
+	public WebElement getServicemenuinservice() {
+		return servicemenuinservice;
+	}
+
+	public void setServicemenuinservice(WebElement servicemenuinservice) {
+		this.servicemenuinservice = servicemenuinservice;
+	}
+
+	public WebElement getPartsservice() {
+		return partsservice;
+	}
+
+	public void setPartsservice(WebElement partsservice) {
+		this.partsservice = partsservice;
+	}
+
+	public WebElement getWelcomeservice() {
+		return welcomeservice;
+	}
+
+	public void setWelcomeservice(WebElement welcomeservice) {
+		this.welcomeservice = welcomeservice;
+	}
+
+	public WebElement getASCservice() {
+		return ASCservice;
+	}
+
+	public void setASCservice(WebElement aSCservice) {
+		ASCservice = aSCservice;
+	}
+
+	@FindBy(xpath="//*[@id=\"root\"]/div[1]/div/main/div/div/div[4]/div[2]/div/div/button")
+	WebElement booknowbutton;
+	@FindBy(xpath="//*[@id=\"root\"]/div[1]/div/main/div/div/div[4]/div[2]/div/div/div[2]/button[1]")
+	WebElement generalservice;
+	@FindBy(xpath="//*[@id=\"root\"]/div[1]/div/main/div/div/div[2]/div/div[2]/div[1]/div/div[2]/div[3]/div[2]/button[1]")
+	WebElement gotocartbutton;
+	@FindBy(xpath="//*[@id=\"root\"]/div[1]/div/main/div/div/div/div[2]/div[2]/div/div[5]/button")
+	WebElement placeorderservicebutton;
+	
+	/////// pre-booked
+	
+	/// availableservices
+	
+	@FindBy(xpath="//*[@href=\"/services\"]")
+	WebElement servicemenuinservice;
+	
+	@FindBy(xpath="//*[@id=\"root\"]/div[1]/div/main/div/div/div[1]/div/div[2]/nav/div/div[2]")
+	WebElement partsservice;
+	
+	@FindBy(xpath="//*[@id=\"root\"]/div[1]/div/main/div/div/div[1]/div/div[2]/nav/div/div[3]")
+	WebElement welcomeservice;
+	
+	@FindBy(xpath="//*[@id=\"root\"]/div[1]/div/main/div/div/div[1]/div/div[2]/nav/div/div[4]")
+	WebElement ASCservice;
+	
+	///spare parts
+	
+	@FindBy(xpath="//*[@href=\"/spare-parts\"]")
+	WebElement Sparepartsmenu;
+	public WebElement getSparepartsmenu() {
+		return Sparepartsmenu;
+	}
+
+	public void setSparepartsmenu(WebElement sparepartsmenu) {
+		Sparepartsmenu = sparepartsmenu;
+	}
+
+	public WebElement getAddtocartbutton() {
+		return addtocartbutton;
+	}
+
+	public void setAddtocartbutton(WebElement addtocartbutton) {
+		this.addtocartbutton = addtocartbutton;
+	}
+
+	public WebElement getSparepartsnextbutton() {
+		return sparepartsnextbutton;
+	}
+
+	public void setSparepartsnextbutton(WebElement sparepartsnextbutton) {
+		this.sparepartsnextbutton = sparepartsnextbutton;
+	}
+
+	public WebElement getCatSpabutto() {
+		return CatSpabutto;
+	}
+
+	public void setCatSpabutto(WebElement catSpabutto) {
+		CatSpabutto = catSpabutto;
+	}
+
+	public WebElement getAddtocart2() {
+		return addtocart2;
+	}
+
+	public void setAddtocart2(WebElement addtocart2) {
+		this.addtocart2 = addtocart2;
+	}
+
+	@FindBy(xpath="/html/body/div[1]/div[1]/div/main/div/div/div[3]/div[1]/div[1]/div[2]/button")
+	WebElement addtocartbutton;
+	@FindBy(xpath="//*[@id=\"root\"]/div[1]/div/main/div/div/div[4]/div[2]/button[2]")
+	WebElement sparepartsnextbutton;
+	@FindBy(xpath="//*[@href=\"/spare-parts/product/688224afba74620160627731\"]")
+	WebElement CatSpabutto;
+	@FindBy(xpath="//*[@id=\"root\"]/div[1]/div/main/div/div/div/div[2]/div[5]/button")
+	WebElement addtocart2;
+	
+	/// booking cart
+	
+	@FindBy(xpath="//*[@href=\"/booking-cart\"]")
+	WebElement bookingcartmenu;
+	public WebElement getBookingcartmenu() {
+		return bookingcartmenu;
+	}
+
+	public void setBookingcartmenu(WebElement bookingcartmenu) {
+		this.bookingcartmenu = bookingcartmenu;
+	}
+
+	public WebElement getSparepartscart() {
+		return sparepartscart;
+	}
+
+	public void setSparepartscart(WebElement sparepartscart) {
+		this.sparepartscart = sparepartscart;
+	}
+
+	public WebElement getRemoveparts() {
+		return removeparts;
+	}
+
+	public void setRemoveparts(WebElement removeparts) {
+		this.removeparts = removeparts;
+	}
+
+	public WebElement getCatsplaceorder() {
+		return catsplaceorder;
+	}
+
+	public void setCatsplaceorder(WebElement catsplaceorder) {
+		this.catsplaceorder = catsplaceorder;
+	}
+
+	public WebElement getBookinsmenu() {
+		return bookinsmenu;
+	}
+
+	public void setBookinsmenu(WebElement bookinsmenu) {
+		this.bookinsmenu = bookinsmenu;
+	}
+
+	public WebElement getBookinsallorder() {
+		return bookinsallorder;
+	}
+
+	public void setBookinsallorder(WebElement bookinsallorder) {
+		this.bookinsallorder = bookinsallorder;
+	}
+
+	public WebElement getBookingspareorders() {
+		return bookingspareorders;
+	}
+
+	public void setBookingspareorders(WebElement bookingspareorders) {
+		this.bookingspareorders = bookingspareorders;
+	}
+
+	public WebElement getBookingsservices() {
+		return bookingsservices;
+	}
+
+	public void setBookingsservices(WebElement bookingsservices) {
+		this.bookingsservices = bookingsservices;
+	}
+
+	public WebElement getBookingsviewdetails() {
+		return bookingsviewdetails;
+	}
+
+	public void setBookingsviewdetails(WebElement bookingsviewdetails) {
+		this.bookingsviewdetails = bookingsviewdetails;
+	}
+
+	public WebElement getOffersmenu() {
+		return offersmenu;
+	}
+
+	public void setOffersmenu(WebElement offersmenu) {
+		this.offersmenu = offersmenu;
+	}
+
+	@FindBy(xpath="//*[@id=\"root\"]/div[1]/div/main/div/div/div/div[1]/div/button[1]")
+	WebElement sparepartscart;
+	@FindBy(xpath="//*[@id=\"root\"]/div[1]/div/main/div/div/div/div[2]/div[1]/div/div/div[1]/div/div[2]/div[4]/button")
+	WebElement removeparts;
+	@FindBy(xpath="//*[@id=\"root\"]/div[1]/div/main/div/div/div/div[2]/div[2]/div/div[5]/button")
+	WebElement catsplaceorder;
+	
+	///bookings
+	
+	@FindBy(xpath="//*[@href=\"/bookings\"]")
+	WebElement bookinsmenu;
+	@FindBy(xpath="//*[@id=\"root\"]/div[1]/div/main/div/div/div/div[2]/div[2]/div/button[1]")
+	WebElement bookinsallorder;
+	@FindBy(xpath="//*[@id=\"root\"]/div[1]/div/main/div/div/div/div[2]/div[2]/div/button[2]")
+	WebElement bookingspareorders;
+	@FindBy(xpath="//*[@id=\"root\"]/div[1]/div/main/div/div/div/div[2]/div[2]/div/button[3]")
+	WebElement bookingsservices;
+	@FindBy(xpath="//*[@id=\"root\"]/div[1]/div/main/div/div/div/div[3]/div[1]/div/div[2]/div/button")
+	WebElement bookingsviewdetails;
+	
+	/// offers
+	
+	@FindBy(xpath="//*[@href=\"/announcement\"]")
+	WebElement offersmenu;
+	
+	//enquiry
+	
+	@FindBy(xpath="//*[@id=\"root\"]/div[1]/div/header/div[3]/div/button")
+	WebElement enquirymenu;
+	public WebElement getEnquirymenu() {
+		return enquirymenu;
+	}
+
+	public void setEnquirymenu(WebElement enquirymenu) {
+		this.enquirymenu = enquirymenu;
+	}
+
+	public WebElement getCarmodel() {
+		return carmodel;
+	}
+
+	public void setCarmodel(WebElement carmodel) {
+		this.carmodel = carmodel;
+	}
+
+	public WebElement getServicetypeinenquiry() {
+		return servicetypeinenquiry;
+	}
+
+	public void setServicetypeinenquiry(WebElement servicetypeinenquiry) {
+		this.servicetypeinenquiry = servicetypeinenquiry;
+	}
+
+	public WebElement getEnquirydate() {
+		return enquirydate;
+	}
+
+	public void setEnquirydate(WebElement enquirydate) {
+		this.enquirydate = enquirydate;
+	}
+
+	public WebElement getEnquirydes() {
+		return enquirydes;
+	}
+
+	public void setEnquirydes(WebElement enquirydes) {
+		this.enquirydes = enquirydes;
+	}
+
+	public WebElement getSubmitenquiry() {
+		return submitenquiry;
+	}
+
+	public void setSubmitenquiry(WebElement submitenquiry) {
+		this.submitenquiry = submitenquiry;
+	}
+////////////////////////////////////////////////////
+	public WebElement getNotificationmenu() {
+		return notificationmenu;
+	}
+
+	public void setNotificationmenu(WebElement notificationmenu) {
+		this.notificationmenu = notificationmenu;
+	}
+
+	public WebElement getNotificationviewall() {
+		return notificationviewall;
+	}
+
+	public void setNotificationviewall(WebElement notificationviewall) {
+		this.notificationviewall = notificationviewall;
+	}
+
+	public WebElement getAllnotification() {
+		return allnotification;
+	}
+
+	public void setAllnotification(WebElement allnotification) {
+		this.allnotification = allnotification;
+	}
+
+	public WebElement getUnreadnotification() {
+		return unreadnotification;
+	}
+
+	public void setUnreadnotification(WebElement unreadnotification) {
+		this.unreadnotification = unreadnotification;
+	}
+
+	public WebElement getAllreadnotification() {
+		return allreadnotification;
+	}
+
+	public void setAllreadnotification(WebElement allreadnotification) {
+		this.allreadnotification = allreadnotification;
+	}
+
+	@FindBy(xpath="//input[@id='carModel']")
+	WebElement carmodel;
+	@FindBy(xpath = "//*[@id=\"serviceType\"]")
+	WebElement servicetypeinenquiry;
+	@FindBy(xpath="//*[@id=\"preferredDate\"]")
+	WebElement enquirydate;
+	@FindBy(xpath="//*[@id=\"enquiry\"]")
+	WebElement enquirydes;
+	@FindBy(xpath="//*[@type=\"submit\"]")
+	WebElement submitenquiry;
+	
+	//notification
+	
+	@FindBy(xpath="//*[@aria-label=\"Notifications\"]")
+	WebElement notificationmenu;
+	@FindBy(xpath="//*[text()=\"View All Notifications\"]")
+	WebElement notificationviewall;
+	@FindBy(xpath="//*[@id=\"root\"]/div[1]/div/main/div/div/div/aside/div[2]/button[1]")
+	WebElement allnotification;
+	@FindBy(xpath="//*[@id=\"root\"]/div[1]/div/main/div/div/div/aside/div[2]/button[2]")
+	WebElement unreadnotification;
+	@FindBy(xpath="//*[@id=\"root\"]/div[1]/div/main/div/div/div/aside/div[2]/button[3]")
+	WebElement allreadnotification;
+	
+	//// Profile
+	@FindBy(xpath="//*[@id=\"root\"]/div[1]/div/header/div[2]/div[5]/div[3]/button")
+	WebElement profilemenu;
+	public WebElement getProfilemenu() {
+		return profilemenu;
+	}
+
+	public void setProfilemenu(WebElement profilemenu) {
+		this.profilemenu = profilemenu;
+	}
+
+	public WebElement getProfilebutton() {
+		return profilebutton;
+	}
+
+	public void setProfilebutton(WebElement profilebutton) {
+		this.profilebutton = profilebutton;
+	}
+
+	public WebElement getEditbutton() {
+		return editbutton;
+	}
+
+	public void setEditbutton(WebElement editbutton) {
+		this.editbutton = editbutton;
+	}
+
+	public WebElement getCardetailsbutton() {
+		return Cardetailsbutton;
+	}
+
+	public void setCardetailsbutton(WebElement cardetailsbutton) {
+		Cardetailsbutton = cardetailsbutton;
+	}
+
+	public WebElement getAddcardetails() {
+		return addcardetails;
+	}
+
+	public void setAddcardetails(WebElement addcardetails) {
+		this.addcardetails = addcardetails;
+	}
+
+	public WebElement getCarregno() {
+		return Carregno;
+	}
+
+	public void setCarregno(WebElement carregno) {
+		Carregno = carregno;
+	}
+
+	public WebElement getCarmodelinprofile() {
+		return Carmodelinprofile;
+	}
+
+	public void setCarmodelinprofile(WebElement carmodelinprofile) {
+		Carmodelinprofile = carmodelinprofile;
+	}
+
+	public WebElement getCarcompany() {
+		return Carcompany;
+	}
+
+	public void setCarcompany(WebElement carcompany) {
+		Carcompany = carcompany;
+	}
+
+	public WebElement getCarYear() {
+		return CarYear;
+	}
+
+	public void setCarYear(WebElement carYear) {
+		CarYear = carYear;
+	}
+
+	public WebElement getCarfueltype() {
+		return carfueltype;
+	}
+
+	public void setCarfueltype(WebElement carfueltype) {
+		this.carfueltype = carfueltype;
+	}
+
+	public WebElement getSavecardetails() {
+		return savecardetails;
+	}
+
+	public void setSavecardetails(WebElement savecardetails) {
+		this.savecardetails = savecardetails;
+	}
+
+	public WebElement getProfilesettings() {
+		return profilesettings;
+	}
+
+	public void setProfilesettings(WebElement profilesettings) {
+		this.profilesettings = profilesettings;
+	}
+
+	public WebElement getSettingsbutton() {
+		return settingsbutton;
+	}
+
+	public void setSettingsbutton(WebElement settingsbutton) {
+		this.settingsbutton = settingsbutton;
+	}
+
+	public WebElement getAboutussettings() {
+		return aboutussettings;
+	}
+
+	public void setAboutussettings(WebElement aboutussettings) {
+		this.aboutussettings = aboutussettings;
+	}
+
+	public WebElement getPrivacysettings() {
+		return privacysettings;
+	}
+
+	public void setPrivacysettings(WebElement privacysettings) {
+		this.privacysettings = privacysettings;
+	}
+
+	public WebElement getTermssettings() {
+		return termssettings;
+	}
+
+	public void setTermssettings(WebElement termssettings) {
+		this.termssettings = termssettings;
+	}
+
+	public WebElement getProfilelog() {
+		return profilelog;
+	}
+
+	public void setProfilelog(WebElement profilelog) {
+		this.profilelog = profilelog;
+	}
+
+	public WebElement getLogoutbutton() {
+		return logoutbutton;
+	}
+
+	public void setLogoutbutton(WebElement logoutbutton) {
+		this.logoutbutton = logoutbutton;
+	}
+
+	public WebElement getLogoutokbutton() {
+		return logoutokbutton;
+	}
+
+	public void setLogoutokbutton(WebElement logoutokbutton) {
+		this.logoutokbutton = logoutokbutton;
+	}
+
+	@FindBy(xpath="//*[@href=\"/profile\"]")
+	WebElement profilebutton;
+	@FindBy(xpath="//*[@id=\"root\"]/div[1]/div/main/div/div/div/div[2]/div/div[1]/div/div/div[2]/button")
+	WebElement editbutton;
+	@FindBy(xpath="//*[@id=\"root\"]/div[1]/div/main/div/div/div/div[2]/div/div[2]/div[2]/button")
+	WebElement Cardetailsbutton;
+	@FindBy(xpath="//*[text()=\"ADD ANOTHER CAR\"]")
+	WebElement addcardetails;
+	@FindBy(xpath="//*[@placeholder=\"Car Registration No\"]")
+	WebElement Carregno;
+	@FindBy(xpath="//*[@placeholder=\"Car Model\"]")
+	WebElement Carmodelinprofile;
+	@FindBy(xpath="//*[@placeholder=\"Car Company\"]")
+	WebElement Carcompany;
+	@FindBy(xpath="//*[@id=\"root\"]/div[1]/div/main/div/div/div/div[1]/div/div[2]/div/div/div/div/div/div[4]/input")
+	WebElement CarYear;
+	@FindBy(xpath="//*[@id=\"root\"]/div[1]/div/main/div/div/div/div[1]/div/div[2]/div/div/div/div/div/div[5]/input")
+	WebElement carfueltype;
+	@FindBy(xpath="//*[@id=\"root\"]/div[1]/div/main/div/div/div/div[1]/div/div[2]/div/div/div/div/div/div[6]/button[2]")
+	WebElement savecardetails;
+	
+	//settings
+	@FindBy(xpath = "/html/body/div/div[1]/div/header/div[2]/div[5]/div[3]/button")
+	WebElement profilesettings;
+	@FindBy(xpath="//*[@href=\"/settings\"]")
+	WebElement settingsbutton;
+	@FindBy(xpath="//*[@id=\"root\"]/div[1]/div/main/div/div/div[1]/button[1]")
+	WebElement aboutussettings;
+	@FindBy(xpath="//*[@id=\"root\"]/div[1]/div/main/div/div/div[1]/button[2]")
+	WebElement privacysettings;
+	@FindBy(xpath="//*[@id=\"root\"]/div[1]/div/main/div/div/div[1]/button[3]")
+	WebElement termssettings;
+	
+	/// logout
+	@FindBy(xpath = "/html/body/div/div[1]/div/header/div[2]/div[5]/div[3]/button")
+	WebElement profilelog;
+	@FindBy(xpath="//button[normalize-space()='Logout']")
+	WebElement logoutbutton;
+	@FindBy(xpath="//*[@id=\"root\"]/div[1]/div/header/div[2]/div[5]/div[2]/div/div/button[2]")
+	WebElement logoutokbutton;
+}

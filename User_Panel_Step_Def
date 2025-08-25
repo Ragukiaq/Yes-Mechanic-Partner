@@ -1,36 +1,392 @@
-package com.Test_Runner;
+package com.Step_Definition;
 
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
-import org.junit.runner.RunWith;
+import java.util.Scanner;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.Base_Class.Base_Class;
+import com.Pom_Class.User_login;
 
-import io.cucumber.java.After;
-import io.cucumber.junit.Cucumber;
-import io.cucumber.junit.CucumberOptions;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
-@CucumberOptions (features = "C:\\Users\\Lenevo\\eclipse-workspace\\Partnerr\\src\\test\\java\\com\\featurefile\\User.feature", glue = "com.Step_Definition",
-plugin = {"pretty", "html:target/html/repot.html"})
-
-@RunWith (Cucumber.class)
-
-public class User_test_runner extends Base_Class{
+public class User_step_def extends Base_Class {
 	
-	@BeforeClass
-	public static void browserlaunch() {
-	driver= Base_Class.Browser_lauch();
-	maximize();	
+	User_login ul = new User_login(driver);
 	
+	//login
+	
+	@Given("User launch the application")
+	public void user_launch_the_application() {
+		getUrl("https://sms-userpanel.netlify.app/login");
 	}
-	@AfterClass
-	
-	public static void end() throws InterruptedException {
-		
-		Thread.sleep(3000);
-		
-	//	driver.close();
-
+	@When("User enter the mobile number in mobilenumber id field")
+	public void user_enter_the_mobile_number_in_mobilenumber_id_field() {
+		SendKeys(ul.getPhonenumber(), "6382564566");
 	}
+	@When("User click the login button")
+	public void user_click_the_login_button() {
+		waitimplicit();
+		clicktheelement(ul.getLoginbutton());
+	}
+	@When("User enter the otp {string} otp verify page")
+	public void user_enter_the_otp_otp_verify_page(String otp) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter OTP received: ");
+		String otp1 = sc.nextLine();
+		enterOtp(otp1);
+	}
+	@Then("User click the Verify OTP button")
+	public void user_click_the_verify_otp_button() {
+		clicktheelement(ul.getOTPverify());
+	}
+
+//// home
+	
+	@Given("User click the home button on the user panel")
+	public void user_click_the_home_button_on_the_user_panel() {
+		clicktheelement(ul.getHomemenu());
+	}
+	@When("User scrollup to see the Available Services and Available Spare Parts on home page")
+	public void user_scrollup_to_see_the_available_services_and_available_spare_parts_on_home_page() {
+		Scrollup();
+	}
+	@Then("User scroll end of the page to see the home page details")
+	public void user_scroll_end_of_the_page_to_see_the_home_page_details() {
+		Scrollupanddown(ul.getScrollendofthepage());
+	    
+	} 
+	
+	/// service
+	@Given("User click the service menu button on user panel")
+	public void user_click_the_service_menu_button_on_user_panel() {
+		waitimplicit();
+		clicktheelement(ul.getServicemenu());
+	}
+	@When("User click the enginee type button")
+	public void user_click_the_enginee_type_button(){
+		waitimplicit();
+		clicktheelement(ul.getServicetype());
+	}
+	@When("User click the Add to Card button to add the service")
+	public void user_click_the_add_to_card_button_to_add_the_service() {
+		Actions(ul.getAddtocart());
+	}
+	@When("User selce General service button")
+	public void user_selce_general_service_button() throws InterruptedException {
+		Thread.sleep(2000);
+		Actions(ul.getGeneralservice());
+	}
+	@When("User able to select the car using dropdown option")
+	public void user_able_to_select_the_car_using_dropdown_option() throws InterruptedException {
+		Thread.sleep(2000);
+		selecttheindex(ul.getAddcars(), 1);
+	}
+	@When("User click the Book Now button to booking the service")
+	public void user_click_the_book_now_button_to_booking_the_service() throws InterruptedException {
+		Thread.sleep(2000);
+		clicktheelement(ul.getBooknowbutton());
+	}
+	@When("User click go to card button to navigate booking card page")
+	public void user_click_go_to_card_button_to_navigate_booking_card_page() throws InterruptedException {
+		Thread.sleep(2000);
+		clicktheelement(ul.getGotocartbutton());
+	}
+	@Then("User click the place order button to placed the order")
+	public void user_click_the_place_order_button_to_placed_the_order() throws InterruptedException {
+		Thread.sleep(2000);
+		clicktheelement(ul.getPlaceorderservicebutton());
+	} 
+	
+	//// available services
+	
+	@Given("User click the enginee menu button")
+	public void user_click_the_enginee_menu_button() {
+		waitimplicit();
+		Actions(ul.getServicemenuinservice());
+	}
+	@When("User click the parts service button")
+	public void user_click_the_parts_service_button() {
+		clicktheelement(ul.getPartsservice());
+	}
+	@When("User click the welcome service button")
+	public void user_click_the_welcome_service_button() {
+		clicktheelement(ul.getWelcomeservice());
+	}
+	@Then("User click the ASC service button")
+	public void user_click_the_asc_service_button() {
+		clicktheelement(ul.getASCservice());
+	}
+	
+	//spare parts
+	
+	@Given("User click the Spare Parts menu on user panel")
+	public void user_click_the_spare_parts_menu_on_user_panel() {
+	    Actions(ul.getSparepartsmenu());
+	}
+	@When("User scrollupto selct the addtocart button")
+	public void user_scrollupto_selct_the_addtocart_button(){
+		Actions(ul.getAddtocartbutton());
+		
+	}
+	@When("User scroll to click the next button on the Our Bundle.")
+	public void user_scroll_to_click_the_next_button_on_the_our_bundle() {
+		Actions(ul.getSparepartsnextbutton());
+	}
+	@When("User scroll to Categories and select the Engine button")
+	public void user_scroll_to_categories_and_select_the_engine_button() throws InterruptedException {
+		Actions(ul.getCatSpabutto());
+	}
+	@When("User selcet the addtocart button to add the product")
+	public void user_selcet_the_addtocart_button_to_add_the_product() {
+		Actions(ul.getAddtocart2());
+	}
+	@Then("User click the back to the button on the page")
+	public void user_click_the_back_to_the_button_on_the_page() {
+		navigateback();
+	} 
+	/// Booking carts
+	
+	@Given("User click the booking cart menu button")
+	public void user_click_the_booking_cart_menu_button() {
+		waitimplicit();
+		clicktheelement(ul.getBookingcartmenu());
+	    
+	}
+	@When("User click spare parts orders button on cart page")
+	public void user_click_spare_parts_orders_button_on_cart_page() {
+		Actions(ul.getSparepartscart());
+	    
+	}
+	@When("User able to click the remove the order using remove option")
+	public void user_able_to_click_the_remove_the_order_using_remove_option() {
+		Actions(ul.getRemoveparts());
+	    
+	}
+	@Then("User click the placed order button to place the order")
+	public void user_click_the_placed_order_button_to_place_the_order() {
+		Actions(ul.getCatsplaceorder());
+	    
+	}
+//// bookings
+	
+	@Given("User clikc the Bookings menu button")
+	public void user_clikc_the_bookings_menu_button() {
+		waitimplicit();
+		clicktheelement(ul.getBookinsmenu());
+	    
+	}
+	@When("User click the all order option to see all orders")
+	public void user_click_the_all_order_option_to_see_all_orders() {
+		Actions(ul.getBookinsallorder());
+	    
+	}
+	@When("User click spare parts option to see spare parts orders")
+	public void user_click_spare_parts_option_to_see_spare_parts_orders() {
+		Actions(ul.getBookingspareorders());
+	    
+	}
+	@When("User click service option to see service requets")
+	public void user_click_service_option_to_see_service_requets() {
+		Actions(ul.getBookingsservices());
+	    
+	}
+	@Then("User click view button to see orders details")
+	public void user_click_view_button_to_see_orders_details() {
+		Actions(ul.getBookingsviewdetails());
+	    
+	}
+////// offers
+	
+	@Given("User click the Offers menu button")
+	public void user_click_the_offers_menu_button() {
+		waitimplecit();
+		ClicktheElement(ul.getOffersmenu());
+	}
+	@Then("User scrollupto see the avilable offers details")
+	public void user_scrollupto_see_the_avilable_offers_details() {
+		Scrollup();
+	    
+	} 
+	
+	///enquiry
+	
+
+ @Given("User click the enquiry menu button")
+public void user_click_the_enquiry_menu_button() {
+	Actions(ul.getEnquirymenu());
+}
+@When("User able to enter the car model in car model field")
+public void user_able_to_enter_the_car_model_in_car_model_field() throws InterruptedException {
+	SendKeys(ul.getCarmodel(), "abc");
+
+}
+@When("User ableto select the serive type using dropdown")
+public void user_ableto_select_the_serive_type_using_dropdown() {
+	selecttheindex(ul.getServicetypeinenquiry(), 1);
+    
+}
+@When("User able to enter the service date in date field")
+public void user_able_to_enter_the_service_date_in_date_field() {
+	SendKeys(ul.getEnquirydate(), "02/12/2025");
+    
+}
+@When("User enter the enquiry in your enquiry field")
+public void user_enter_the_enquiry_in_your_enquiry_field() {
+	SendKeys(ul.getEnquirydes(), "Hi Hello Welcome to the service");
+    
+}
+@Then("User able to click the submit button")
+public void user_able_to_click_the_submit_button() {
+	Actions(ul.getSubmitenquiry());
+   
+}
+
+////notification
+
+ @Given("User click the notificaion menu")
+public void user_click_the_notificaion_menu() {
+	Actions(ul.getNotificationmenu());
+}
+@When("User able to click view all notification button")
+public void user_able_to_click_view_all_notification_button() throws InterruptedException {
+	Thread.sleep(3000);
+	
+	Actions(ul.getNotificationviewall());
+	
+	//clicktheelement(ul.getNotificationviewall());
+}
+@When("User able click the all button in notification page")
+public void user_able_click_the_all_button_in_notification_page() {
+	Actions(ul.getAllnotification());
+}
+@When("User able click the unread button in notification page")
+public void user_able_click_the_unread_button_in_notification_page() {
+	Actions(ul.getUnreadnotification());
+}
+@Then("User able click the read button in notification page")
+public void user_able_click_the_read_button_in_notification_page() {
+	Actions(ul.getAllreadnotification());
+}
+
+/// profile
+
+@Given("User click the profilemenu button")
+public void user_click_the_profilemenu_button() {
+	Actions(ul.getProfilemenu());
+}
+@When("User click the profile button inside the profile")
+public void user_click_the_profile_button_inside_the_profile() {
+	safeClick(ul.getProfilebutton());
+	
+	//Actions(ul.getProfilebutton());
+    
+}
+@When("User able to click the edit button to edit the profile details")
+public void user_able_to_click_the_edit_button_to_edit_the_profile_details(){
+	Actions(ul.getEditbutton());
+    
+}
+@When("User click the car detail button to add or edit the car details")
+public void user_click_the_car_detail_button_to_add_or_edit_the_car_details() {
+	Actions(ul.getCardetailsbutton());
+   
+}
+@When("User click the add another car buuton to add the car details")
+public void user_click_the_add_another_car_buuton_to_add_the_car_details() {
+	waitimplicit();
+	clicktheelement(ul.getAddcardetails());
+    
+}
+@When("User able to enter Car Registration num on the Car Registration num field")
+public void user_able_to_enter_car_registration_num_on_the_car_registration_num_field() throws InterruptedException {
+	Thread.sleep(2000);
+	SendKeys(ul.getCarregno(), "TN07BX4321");
+    
+}
+@When("User able to enter the Car Model in add Car Model field")
+public void user_able_to_enter_the_car_model_in_add_car_model_field() throws InterruptedException {
+	Thread.sleep(2000);
+	SendKeys(ul.getCarmodelinprofile(), "XXUV");
+    
+}
+@When("User able to enter the Car Company in Car company field")
+public void user_able_to_enter_the_car_company_in_car_company_field() throws InterruptedException {
+	Thread.sleep(2000);
+	SendKeys(ul.getCarcompany(), "Ford");
+    
+}
+@When("User able to enter the Car Year in Car Year field")
+public void user_able_to_enter_the_car_year_in_car_year_field() throws InterruptedException {
+	Thread.sleep(2000);
+	SendKeys(ul.getCarYear(), "2010");
+    
+}
+@When("User able to enter the Car Fuel Type in Car Fuel field")
+public void user_able_to_enter_the_car_fuel_type_in_car_fuel_field() throws InterruptedException {
+	Thread.sleep(2000);
+	SendKeys(ul.getCarfueltype(), "Petroll");
+    
+}
+@Then("User click Save button to save the car details")
+public void user_click_save_button_to_save_the_car_details() throws InterruptedException {
+	Thread.sleep(2000);
+	Actions(ul.getSavecardetails());
+    
+}
+
+
+//// settings
+
+ @Given("User click the Profile button on the top of th eright corner")
+public void user_click_the_profile_button_on_the_top_of_th_eright_corner() {
+	waitimplicit();
+	clicktheelement(ul.getProfilesettings());
+    
+}
+@When("User click the settings button inside the profile")
+public void user_click_the_settings_button_inside_the_profile() {
+	Actions(ul.getSettingsbutton());
+    
+}
+@When("User click the About us button in settings page")
+public void user_click_the_about_us_button_in_settings_page() {
+	Actions(ul.getAboutussettings());
+    
+}
+@When("User click the Privacy Policy button in settings page")
+public void user_click_the_privacy_policy_button_in_settings_page() {
+	Actions(ul.getPrivacysettings());
+    
+}
+@Then("User click the Terms&Condition button in settings page")
+public void user_click_the_terms_condition_button_in_settings_page() {
+	Actions(ul.getTermssettings());
+    
+} 
+
+/// logout
+
+@Given("User click the Profile button on the top of th eright corner2")
+public void user_click_the_profile_button_on_the_top_of_th_eright_corner2() {
+	Actions(ul.getProfilelog());
+    
+}
+@When("User click the LogOut button inside the profile")
+public void user_click_the_log_out_button_inside_the_profile() {
+	waitimplicit();
+	clicktheelement(ul.getLogoutbutton());
+}
+@Then("User click the OK button to logout the application")
+public void user_click_the_ok_button_to_logout_the_application() {
+	Actions(ul.getLogoutokbutton());
+    
+}
 
 }

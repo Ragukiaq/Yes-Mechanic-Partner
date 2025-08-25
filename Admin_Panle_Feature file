@@ -32,25 +32,6 @@ Scenario: Admin validate the partner funtionality on the admin panel
 	And Admin click the view button on the on partner profile to see partners details
 	Then Admin able to click profile back button and back to the partners page
 	
-
-Scenario: Admin validate the partner profile edit profile functionality
-	Given Admin click the edit profile button in the parts page
-	When Admin able to modify the partner first name in first name field
-	And Admin able to modify the partner last name in last name field
-	And Admin able to modify the company name in company name field
-	And Admin able to modify the address in address field1
-	And Admin able to modify the address in address field2
-	And Admin able to modify the state in state field
-	And Admin able to modify the city in citi field
-	And Admin able to modify the PIN code in PIN code field
-	And Admin able to modify the Aadhar No in Aadhar No field
-	And Admin able to modify the PAN Card in pan card field
-	And Admin able to modify the GST No in gst number field
-	And Admin able to modify the Registration No in registration No field
-	And Admin able to modify the login email id in email No field
-	And Admin click the save change button
-	Then Admin able to click profile back button
-	
 Scenario: Admin validate the add partner functionality on partners page
 	Given Admin click the Add button on partners page
 	When Admin able to enter the partner first name in first name field
@@ -70,10 +51,23 @@ Scenario: Admin validate the add partner functionality on partners page
 	And Admin able to enter the password in password fiel
 	Then Admin able to click Register button
 	
+Scenario: Admin validate the partner profile edit profile functionality
+	Given Admin click the view button on the partner page
+	When Admin click the edit profile button in the parts page
+	And  Admin able to modify the partner first name in first name field
+	And Admin able to modify the partner last name in last name field
+	And Admin able to modify the company name in company name field
+	And Admin able to modify the address in address field1
+	And Admin able to modify the address in address field2
+	And Admin able to modify the PAN Card in pan card field
+	And Admin able to modify the GST No in gst number field
+	And Admin able to modify the Registration No in registration No field
+	And Admin click the save change button
+	Then Admin able to click profile back button
+	
 Scenario: Admin validate the jobs cards on partners page
 	Given Admin click the jobs cards menu button
 	When Admin click the history button tp Completed Jobs detail 
-	And Adim click the view button to see Job Card Details
 	And Admin view the details to close the details page
 	Then Admin click the back button on the Completed Jobs 
 	

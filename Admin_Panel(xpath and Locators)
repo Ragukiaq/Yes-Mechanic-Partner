@@ -119,7 +119,7 @@ public class Admin_login {
 	WebElement schedulemeanu;
 	@FindBy(xpath="//*[@id=\"root\"]/div/div[2]/main/div/div/div[1]/div/button")
 	WebElement schedulebutton;
-	@FindBy(xpath="//*[@id=\"root\"]/div/div[2]/main/div/div/div[1]/div[1]/button")
+	@FindBy(xpath="/html/body/div/div/div[2]/main/div/div/div[1]/div[1]/button")
 	WebElement backtinschedule;
 	
 	///////------  orders
@@ -159,9 +159,9 @@ public class Admin_login {
 		this.viewpartnerdetails = viewpartnerdetails;
 	}
 
-	@FindBy(xpath="//*[@id=\"root\"]/div/div[2]/main/div/div/div/div/div/div/div[2]/div[6]/div/div[2]/button")
+	@FindBy(xpath="//*[@id=\"root\"]/div/div[2]/main/div/div/div/div/div/div/div[2]/div[4]/div/div[2]/button")
 	WebElement scolltoseepartners;
-	@FindBy(xpath="//*[@id=\"root\"]/div/div[2]/main/div/div/div/div/div/div/div[2]/div[3]/div/div[2]/button")
+	@FindBy(xpath="//*[@id=\"root\"]/div/div[2]/main/div/div/div/div/div/div/div[2]/div[1]/div/div[2]/button")
 	WebElement viewpartnerdetails;
 	@FindBy(xpath="//*[@id=\"root\"]/div/div[2]/main/div/div/div/div/div[1]/button")
 	WebElement backtopartnerpage;
@@ -172,6 +172,15 @@ public class Admin_login {
 	}
 	public void setBacktopartnerpage(WebElement backtopartnerpage) {
 		this.backtopartnerpage = backtopartnerpage;
+	}
+	@FindBy(xpath="//*[@id=\"root\"]/div/div[2]/main/div/div/div/div/div/div/div[2]/div[1]/div/div[2]/button")
+	WebElement viewbuttonformodify;
+
+	public WebElement getViewbuttonformodify() {
+		return viewbuttonformodify;
+	}
+	public void setViewbuttonformodify(WebElement viewbuttonformodify) {
+		this.viewbuttonformodify = viewbuttonformodify;
 	}
 
 	@FindBy(xpath="//*[@id=\"root\"]/div/div[2]/main/div/div/div/div/div[2]/div[2]/div[6]/button[1]")
@@ -299,7 +308,7 @@ public class Admin_login {
 	WebElement modifygst;
 	@FindBy(xpath="//*[@id=\"root\"]/div/div[2]/main/div/div/div/div/div[3]/form/div[2]/div[2]/div[13]/input")
 	WebElement modifyregnum;
-	@FindBy(xpath="//*[@id=\"root\"]/div/div[2]/main/div/div/div/div/div[3]/form/div[2]/div[3]/div/div/input")
+	@FindBy(xpath="//*[@value=\"PMR@GMAIL.COM\"]")
 	WebElement modifyloginemail;
 	@FindBy(xpath="//*[@id=\"root\"]/div/div[2]/main/div/div/div/div/div[3]/form/div[3]/button[2]")
 	WebElement savechangebutton;
@@ -315,7 +324,7 @@ public class Admin_login {
 	
 	////=---add Partner
 	
-	@FindBy(xpath="/html/body/div/div/div[2]/main/div/div/div/div/div/div/div[1]/div/button[2]")
+	@FindBy(xpath="//*[@id=\"root\"]/div/div[2]/main/div/div/div/div/div/div/div[1]/div/button[2]")
 	
 	WebElement addpartnerbutton;
 	public WebElement getAddpartnerbutton() {
@@ -421,11 +430,11 @@ public class Admin_login {
 		this.addpartnerregisterbutton = addpartnerregisterbutton;
 	}
 
-	@FindBy(xpath="//*[@placeholder=\"First Name\"]")
+	@FindBy(xpath="//*[@name=\"firstName\"]")
 	WebElement addpartnerfirstname;
-	@FindBy(xpath="//*[@placeholder=\"Last Name\"]")
+	@FindBy(xpath="//*[@name=\"lastName\"]")
 	WebElement addpartnerlastname;
-	@FindBy(xpath="//*[@placeholder=\"Company Name\"]")
+	@FindBy(xpath="//*[@name=\"companyName\"]")
 	WebElement addpartnercompanyname;
 	@FindBy(xpath="//*[@placeholder=\"Phone Number\"]")
 	WebElement addpartnermobilenum;
@@ -451,7 +460,7 @@ public class Admin_login {
 	WebElement addpartneremail;
 	@FindBy(xpath="//*[@placeholder=\"***********\"]")
 	WebElement addpartnerpassword;
-	@FindBy(xpath="//*[@id=\"root\"]/div/div[2]/main/div/div/div/div/div[2]/div/form/div[5]/div/button[2]")
+	@FindBy(xpath="//*[text()=\"Register\"]")
 	WebElement addpartnerregisterbutton;
 	
 	//------------- job cards
@@ -489,13 +498,13 @@ public class Admin_login {
 		this.backtojobcarddetails = backtojobcarddetails;
 	}
 
-	@FindBy(xpath="//*[@id=\"root\"]/div/div[2]/main/div/div/div/div[2]/div[2]/button")
+	@FindBy(xpath="//*[text()=\"History\"]")
 	WebElement jobhistory;
 	@FindBy(xpath="//*[@id=\"root\"]/div/div[2]/main/div/div/div[3]/table/tbody/tr/td[10]/div/button[1]")
 	WebElement jobviewbutton;
 	@FindBy(xpath="//*[@id=\"root\"]/div/div[2]/main/div/div/div[4]/div/div[1]/div[2]/button")
 	WebElement closejobcards;
-	@FindBy(xpath="//*[@id=\"root\"]/div/div[2]/main/div/div/div[1]/button")
+	@FindBy(xpath="/html/body/div/div/div[2]/main/div/div/div[1]/button")
 	WebElement backtojobcarddetails;
 	
 //------- city
@@ -936,7 +945,7 @@ WebElement unreadnotification;
 
 ///logout
 
-@FindBy(xpath="//div[@class='flex items-center whitespace-nowrap' and contains(text(),'Admin')]")
+@FindBy(xpath="//*[text()=\"Admin\"]")
 
 
 WebElement logoutmenu;
@@ -959,7 +968,7 @@ public void setConfirmlogout(WebElement confirmlogout) {
 	this.confirmlogout = confirmlogout;
 }
 
-@FindBy(xpath="//*[@id=\"root\"]/div/div[2]/nav/div[3]/div[2]/div[2]/ul/li[2]/button")
+@FindBy(xpath="//*[text()=\"Logout\"]")
 WebElement logoutbutton;
 @FindBy(xpath="//*[@id=\"root\"]/div/div[2]/div/div/div/button[2]")
 WebElement confirmlogout;

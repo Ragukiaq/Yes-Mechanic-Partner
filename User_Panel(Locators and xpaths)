@@ -119,7 +119,7 @@ public class User_login {
 	public void setServicetype(WebElement servicetype) {
 		this.servicetype = servicetype;
 	}
-	@FindBy(xpath="//*[@id=\"cars\"]")
+	@FindBy(xpath="//*[@title=\"cars\"]")
 	WebElement addcars;
 	public WebElement getAddcars() {
 		return addcars;
@@ -651,7 +651,7 @@ public class User_login {
 		this.logoutokbutton = logoutokbutton;
 	}
 
-	@FindBy(xpath="//*[@href=\"/profile\"]")
+	@FindBy(xpath="//*[@id=\"root\"]/div[1]/div/header/div[2]/div[5]/div[3]/div/div/a[1]")
 	WebElement profilebutton;
 	@FindBy(xpath="//*[@id=\"root\"]/div[1]/div/main/div/div/div/div[2]/div/div[1]/div/div/div[2]/button")
 	WebElement editbutton;

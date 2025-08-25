@@ -49,7 +49,7 @@ public class User_step_def extends Base_Class {
 
 //// home
 	
-	/* @Given("User click the home button on the user panel")
+	@Given("User click the home button on the user panel")
 	public void user_click_the_home_button_on_the_user_panel() {
 		clicktheelement(ul.getHomemenu());
 	}
@@ -81,7 +81,7 @@ public class User_step_def extends Base_Class {
 	@When("User selce General service button")
 	public void user_selce_general_service_button() throws InterruptedException {
 		Thread.sleep(2000);
-		clicktheelement(ul.getGeneralservice());
+		Actions(ul.getGeneralservice());
 	}
 	@When("User able to select the car using dropdown option")
 	public void user_able_to_select_the_car_using_dropdown_option() throws InterruptedException {
@@ -109,7 +109,7 @@ public class User_step_def extends Base_Class {
 	@Given("User click the enginee menu button")
 	public void user_click_the_enginee_menu_button() {
 		waitimplicit();
-		clicktheelement(ul.getServicemenuinservice());
+		Actions(ul.getServicemenuinservice());
 	}
 	@When("User click the parts service button")
 	public void user_click_the_parts_service_button() {
@@ -128,7 +128,7 @@ public class User_step_def extends Base_Class {
 	
 	@Given("User click the Spare Parts menu on user panel")
 	public void user_click_the_spare_parts_menu_on_user_panel() {
-	    clicktheelement(ul.getSparepartsmenu());
+	    Actions(ul.getSparepartsmenu());
 	}
 	@When("User scrollupto selct the addtocart button")
 	public void user_scrollupto_selct_the_addtocart_button(){
@@ -155,6 +155,7 @@ public class User_step_def extends Base_Class {
 	
 	@Given("User click the booking cart menu button")
 	public void user_click_the_booking_cart_menu_button() {
+		waitimplicit();
 		clicktheelement(ul.getBookingcartmenu());
 	    
 	}
@@ -177,6 +178,7 @@ public class User_step_def extends Base_Class {
 	
 	@Given("User clikc the Bookings menu button")
 	public void user_clikc_the_bookings_menu_button() {
+		waitimplicit();
 		clicktheelement(ul.getBookinsmenu());
 	    
 	}
@@ -204,18 +206,19 @@ public class User_step_def extends Base_Class {
 	
 	@Given("User click the Offers menu button")
 	public void user_click_the_offers_menu_button() {
+		waitimplecit();
 		ClicktheElement(ul.getOffersmenu());
 	}
 	@Then("User scrollupto see the avilable offers details")
 	public void user_scrollupto_see_the_avilable_offers_details() {
 		Scrollup();
 	    
-	} */
+	} 
 	
 	///enquiry
 	
 
-/* @Given("User click the enquiry menu button")
+ @Given("User click the enquiry menu button")
 public void user_click_the_enquiry_menu_button() {
 	Actions(ul.getEnquirymenu());
 }
@@ -244,17 +247,20 @@ public void user_able_to_click_the_submit_button() {
 	Actions(ul.getSubmitenquiry());
    
 }
-*/
+
 ////notification
 
-/* @Given("User click the notificaion menu")
+ @Given("User click the notificaion menu")
 public void user_click_the_notificaion_menu() {
 	Actions(ul.getNotificationmenu());
 }
 @When("User able to click view all notification button")
-public void user_able_to_click_view_all_notification_button() {
-	waitimplicit();
-	clicktheelement(ul.getNotificationviewall());
+public void user_able_to_click_view_all_notification_button() throws InterruptedException {
+	Thread.sleep(3000);
+	
+	Actions(ul.getNotificationviewall());
+	
+	//clicktheelement(ul.getNotificationviewall());
 }
 @When("User able click the all button in notification page")
 public void user_able_click_the_all_button_in_notification_page() {
@@ -268,17 +274,18 @@ public void user_able_click_the_unread_button_in_notification_page() {
 public void user_able_click_the_read_button_in_notification_page() {
 	Actions(ul.getAllreadnotification());
 }
- 
+
 /// profile
 
 @Given("User click the profilemenu button")
 public void user_click_the_profilemenu_button() {
-	waitimplicit();
-	clicktheelement(ul.getProfilemenu());
+	Actions(ul.getProfilemenu());
 }
 @When("User click the profile button inside the profile")
 public void user_click_the_profile_button_inside_the_profile() {
-	Actions(ul.getProfilebutton());
+	safeClick(ul.getProfilebutton());
+	
+	//Actions(ul.getProfilebutton());
     
 }
 @When("User able to click the edit button to edit the profile details")
@@ -337,7 +344,7 @@ public void user_click_save_button_to_save_the_car_details() throws InterruptedE
 
 //// settings
 
-@Given("User click the Profile button on the top of th eright corner")
+ @Given("User click the Profile button on the top of th eright corner")
 public void user_click_the_profile_button_on_the_top_of_th_eright_corner() {
 	waitimplicit();
 	clicktheelement(ul.getProfilesettings());
@@ -363,7 +370,7 @@ public void user_click_the_terms_condition_button_in_settings_page() {
 	Actions(ul.getTermssettings());
     
 } 
- */
+
 /// logout
 
 @Given("User click the Profile button on the top of th eright corner2")

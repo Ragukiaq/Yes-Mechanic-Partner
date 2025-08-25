@@ -1,11 +1,15 @@
 package com.Step_Definition;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
 import com.Base_Class.Base_Class;
 import com.Pom_Class.Admin_login;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.cucumber.java.lu.a;
 
 public class Admin_Step_def extends Base_Class {
 	
@@ -23,7 +27,7 @@ public class Admin_Step_def extends Base_Class {
 	
 	//////----- servoice request
 	
-	/*@Given("Admin click the service request button")
+	 @Given("Admin click the service request button")
 	public void admin_click_the_service_request_button() {
 		waitimplecit();
 		clicktheelement(al.getSerreqbut());
@@ -56,7 +60,7 @@ public class Admin_Step_def extends Base_Class {
 	
 	@Then("Admin click the back to schedule request button on schedule page")
 	public void admin_click_the_back_to_schedule_request_button() {
-		clicktheelement(al.getBacktinschedule());
+		Actions(al.getBacktinschedule());
 	}
 	
 	
@@ -81,7 +85,7 @@ public class Admin_Step_def extends Base_Class {
 	}
 	@When("Admin click complete order button on order page")
 	public void admin_click_complete_order_button_on_order_page() {
-		clicktheelement(al.getCompleteorders());
+		Actions(al.getCompleteorders());
 	}
 	@When("Admin scrollup see the complte orders detail")
 	public void admin_scrollup_see_the_complte_orders_detail() {
@@ -91,11 +95,11 @@ public class Admin_Step_def extends Base_Class {
 	public void admin_click_the_back_to_schedule_request_button_on_orders_page() {
 		clicktheelement(al.getBackinorder());
 
-	} */
+	} 
 
 	//////////---Partnerr
 	
-	/*	@Given("Admin click the partner button on the admin page")
+	@Given("Admin click the partner button on the admin page")
 	public void admin_click_the_partner_button_on_the_admin_page() {
 		waitimplecit();
 		clicktheelement(al.getPartnerbutton());
@@ -111,131 +115,67 @@ public class Admin_Step_def extends Base_Class {
 	@Then("Admin able to click profile back button and back to the partners page")
 	public void admin_able_to_click_profile_back_button_and_back_to_the_partners_page() {
 		clicktheelement(al.getBacktopartnerpage());
-	}  */
+	}  
 
 
-	///Partner modify
-	
-	/* @Given("Admin click the edit profile button in the parts page")
-	public void admin_click_the_edit_profile_button_in_the_parts_page() {
-		waitimplecit();
-		clicktheelement(al.getEditprofile());
-	}
-	@When("Admin able to modify the partner first name in first name field")
-	public void admin_able_to_modify_the_partner_first_name_in_first_name_field() {
-		SendKeys(al.getModifyfirstname(), "PQRS");
-	}
-	@When("Admin able to modify the partner last name in last name field")
-	public void admin_able_to_modify_the_partner_last_name_in_last_name_field() {
-		SendKeys(al.getModifylastname(),"MNOP");
-	}
-	@When("Admin able to modify the company name in company name field")
-	public void admin_able_to_modify_the_company_name_in_company_name_field() {
-		SendKeys(al.getModifycompanyname(), "ABC Service");
-	}
-	@When("Admin able to modify the address in address field1")
-	public void admin_able_to_modify_the_address_in_address_field1() {
-		SendKeys(al.getModifyaddress1(),"Madurai");
-	}
-	@When("Admin able to modify the address in address field2")
-	public void admin_able_to_modify_the_address_in_address_field2() {
-		SendKeys(al.getModifyaddress2(), "Thene");
-	}
-	@When("Admin able to modify the state in state field")
-	public void admin_able_to_modify_the_state_in_state_field() {
-		SendKeys(al.getModifystate(), "Kerala");
-	}
-	@When("Admin able to modify the city in citi field")
-	public void admin_able_to_modify_the_city_in_citi_field() {
-		SendKeys(al.getModifyciti(), "Varkala");
-	}
-	@When("Admin able to modify the PIN code in PIN code field")
-	public void admin_able_to_modify_the_pin_code_in_pin_code_field() {
-		SendKeys(al.getModifypincode(), "");
-	}
-	@When("Admin able to modify the Aadhar No in Aadhar No field")
-	public void admin_able_to_modify_the_aadhar_no_in_aadhar_no_field() {
-		al.getModifyaadhar().clear();
-		SendKeys(al.getModifyaadhar(), "");
-	}
-	@When("Admin able to modify the PAN Card in pan card field")
-	public void admin_able_to_modify_the_pan_card_in_pan_card_field() {
-		SendKeys(al.getModifypan(), "ABCDE1234F");
-	}
-	@When("Admin able to modify the GST No in gst number field")
-	public void admin_able_to_modify_the_gst_no_in_gst_number_field() {
-		SendKeys(al.getModifygst(), "ABCDE1234F");
-	}
-	@When("Admin able to modify the Registration No in registration No field")
-	public void admin_able_to_modify_the_registration_no_in_registration_no_field() {
-		al.getModifyaadhar().clear();
-		SendKeys(al.getModifyregnum(), "XZAE668");
-	}
-	@When("Admin able to modify the login email id in email No field")
-	public void admin_able_to_modify_the_login_email_id_in_email_no_field() {
-		SendKeys(al.getModifyloginemail(), "");
-	}
-	@When("Admin click the save change button")
-	public void admin_click_the_save_change_button() {
-		clicktheelement(al.getSavechangebutton());
-	}
-	@Then("Admin able to click profile back button")
-	public void admin_able_to_click_profile_back_button() {
-		clicktheelement(al.getBackprofile());
-
-	} */
 	
 	////Add Partner
 	
-	/* @Given("Admin click the Add button on partners page")
+	 @Given("Admin click the Add button on partners page")
 	public void admin_click_the_add_button_on_partners_page() {
-		waitimplicit();
-		clicktheelement(al.getAddpartnerbutton());
-	    
+		Actions(al.getAddpartnerbutton());	    
 	}
 	@When("Admin able to enter the partner first name in first name field")
-	public void admin_able_to_enter_the_partner_first_name_in_first_name_field() {
-		SendKeys(al.getAddpartnerfirstname(), "pqrs");
+	public void admin_able_to_enter_the_partner_first_name_in_first_name_field()throws InterruptedException {
+		Thread.sleep(2000);
+		SendKeys(al.getAddpartnerfirstname(), "PARTNER");
 	    
 	}
 	@When("Admin able to enter the partner last name in last name field")
-	public void admin_able_to_enter_the_partner_last_name_in_last_name_field() {
-		SendKeys(al.getAddpartnerlastname(), "mnop");
+	public void admin_able_to_enter_the_partner_last_name_in_last_name_field()throws InterruptedException {
+		Thread.sleep(2000);
+		SendKeys(al.getAddpartnerlastname(), "Panel");
 	    
 	}
 	@When("Admin able to enter the company name in company name field")
-	public void admin_able_to_enter_the_company_name_in_company_name_field() {
-		SendKeys(al.getAddpartnercompanyname(), "Technologies");
+	public void admin_able_to_enter_the_company_name_in_company_name_field()throws InterruptedException {
+		Thread.sleep(2000);
+		SendKeys(al.getAddpartnercompanyname(), "Tech");
 	}
 	@When("Admin able to enter the mobilenumber in mobile number field")
-	public void admin_able_to_enter_the_mobilenumber_in_mobile_number_field() {
+	public void admin_able_to_enter_the_mobilenumber_in_mobile_number_field()throws InterruptedException {
+		Thread.sleep(2000);
 		SendKeys(al.getAddpartnermobilenum(), "1234567899");
 	    
 	}
 	@When("Admin able to enter the PIN code in PIN code field")
-	public void admin_able_to_enter_the_pin_code_in_pin_code_field() {
+	public void admin_able_to_enter_the_pin_code_in_pin_code_field() throws InterruptedException{
+		Thread.sleep(2000);
 		SendKeys(al.getAddpartnerpincode(), "641605");
 	    
 	}
 	@When("Admin able to enter the address in address field1")
-	public void admin_able_to_enter_the_address_in_address_field1() {
-		SendKeys(al.getAddpartneradd1(), "Chennai");
+	public void admin_able_to_enter_the_address_in_address_field1()throws InterruptedException {
+		Thread.sleep(2000);
+		SendKeys(al.getAddpartneradd1(), "CBE");
 	    
 	}
 	@When("Admin able to enter the address in address field2")
-	public void admin_able_to_enter_the_address_in_address_field2() {
-		SendKeys(al.getAddpartneradd2(), "Thambaram");
+	public void admin_able_to_enter_the_address_in_address_field2()throws InterruptedException {
+		Thread.sleep(2000);
+		SendKeys(al.getAddpartneradd2(), "SULUR");
 	    
 	}
 	@When("Admin able to enter the state in state field")
-	public void admin_able_to_enter_the_state_in_state_field() {
+	public void admin_able_to_enter_the_state_in_state_field() throws InterruptedException {
+		Thread.sleep(2000);
 		selecttheindex(al.getAddpartnerstate(), 5);
 	   
 	}
 	@When("Admin able to enter the city in citi field")
 	public void admin_able_to_enter_the_city_in_citi_field() {
 		waitimplicit();
-		selecttheindex(al.getAddpartnercity(), 6);
+		Selectbyvaule(al.getAddpartnercity(),"Noney");
 	}
 	@When("Admin able to enter the Registration No in registration No field")
 	public void admin_able_to_enter_the_registration_no_in_registration_no_field() {
@@ -243,7 +183,7 @@ public class Admin_Step_def extends Base_Class {
 	}
 	@When("Admin able to enter the Aadhar No in Aadhar No field")
 	public void admin_able_to_enter_the_aadhar_no_in_aadhar_no_field() {
-		SendKeys(al.getAddpartneraadharnum(), "1111 1111 1111");
+		SendKeys(al.getAddpartneraadharnum(), "222244445555");
 	}
 	@When("Admin able to enter the PAN Card in pan card field")
 	public void admin_able_to_enter_the_pan_card_in_pan_card_field() {
@@ -255,42 +195,109 @@ public class Admin_Step_def extends Base_Class {
 	}
 	@When("Admin able to enter the partn email id in email id field")
 	public void admin_able_to_enter_the_partn_email_id_in_email_id_field() {
-		SendKeys(al.getAddpartneremail(), "email123@gmail.com");
+		SendKeys(al.getAddpartneremail(), "user123@gmail.com");
 	}
 	@When("Admin able to enter the password in password fiel")
 	public void admin_able_to_enter_the_password_in_password_fiel() {
-		SendKeys(al.getAddpartnerpassword(), "Admin@123");
+		SendKeys(al.getAddpartnerpassword(), "user@123");
 	}
 	@Then("Admin able to click Register button")
 	public void admin_able_to_click_register_button() {
-		clicktheelement(al.getAddpartnerregisterbutton());
+		Actions(al.getAddpartnerregisterbutton());
+		navigateRefr();
 		
-	} */
+	} 
+	
+	/// modify
+	
+	 @Given("Admin click the view button on the partner page")
+	public void admin_click_the_view_button_on_the_partner_page() {
+		 waitimplicit();
+		clicktheelement(al.getViewbuttonformodify());
+	    
+	}
+	@When("Admin click the edit profile button in the parts page")
+	public void admin_click_the_edit_profile_button_in_the_parts_page() {
+		clicktheelement(al.getEditprofile());
+	    
+	}
+	@When("Admin able to modify the partner first name in first name field")
+	public void admin_able_to_modify_the_partner_first_name_in_first_name_field() {
+		SendKeys(al.getModifyfirstname(), "D");
+	    
+	}
+
+
+	@When("Admin able to modify the partner last name in last name field")
+	public void admin_able_to_modify_the_partner_last_name_in_last_name_field() {
+		al.getModifylastname().clear();
+		SendKeys(al.getModifylastname(),"MN");
+			    
+	}
+	@When("Admin able to modify the company name in company name field")
+	public void admin_able_to_modify_the_company_name_in_company_name_field() {
+		SendKeys(al.getModifycompanyname(), "ABCABC");
+	    
+	}
+	@When("Admin able to modify the address in address field1")
+	public void admin_able_to_modify_the_address_in_address_field1() {
+	    al.getModifyaddress1().clear();
+	    SendKeys(al.getModifyaddress1(), ",OMR");
+	}
+	@When("Admin able to modify the address in address field2")
+	public void admin_able_to_modify_the_address_in_address_field2() {
+		SendKeys(al.getModifyaddress2(), "Vellor");
+	    
+	}
+	@When("Admin able to modify the PAN Card in pan card field")
+	public void admin_able_to_modify_the_pan_card_in_pan_card_field() {
+		SendKeys(al.getModifypan(), "ABCDE1234F");
+	    
+	}
+	@When("Admin able to modify the GST No in gst number field")
+	public void admin_able_to_modify_the_gst_no_in_gst_number_field() {
+		Actions(al.getModifygst());
+		al.getModifygst().clear();
+		SendKeys(al.getModifygst(), "ABCDE1234F");
+	    
+	}
+	@When("Admin able to modify the Registration No in registration No field")
+	public void admin_able_to_modify_the_registration_no_in_registration_no_field() {
+		SendKeys(al.getModifyregnum(), "DL01AB1234");
+	    
+	}
+	@When("Admin click the save change button")
+	public void admin_click_the_save_change_button() {
+	    Actions(al.getSavechangebutton());
+	}
+	@Then("Admin able to click profile back button")
+	public void admin_able_to_click_profile_back_button() {
+		Actions(al.getBackprofile());
+	    
+	}
+
 	
 	///// job cards
 	
-	/* @Given("Admin click the jobs cards menu button")
+	  @Given("Admin click the jobs cards menu button")
 	public void admin_click_the_jobs_cards_menu_button() {
 		waitimplicit();
-		clicktheelement(al.getJobscardsmenu());
+		Actions(al.getJobscardsmenu());
 		
 	}
 	@When("Admin click the history button tp Completed Jobs detail")
 	public void admin_click_the_history_button_tp_completed_jobs_detail() {
-		clicktheelement(al.getJobhistory());
-	}
-	@When("Adim click the view button to see Job Card Details")
-	public void adim_click_the_view_button_to_see_job_card_details() {
-		clicktheelement(al.getJobviewbutton());
+		waitimplecit();
+		Actions(al.getJobhistory());
 	}
 	@When("Admin view the details to close the details page")
 	public void admin_view_the_details_to_close_the_details_page() {
-		clicktheelement(al.getClosejobcards());
+		navigateRefr();
 	}
 	@Then("Admin click the back button on the Completed Jobs")
 	public void admin_click_the_back_button_on_the_completed_jobs() {
-		clicktheelement(al.getBacktojobcarddetails());
-	}
+		Actions(al.getBacktojobcarddetails());
+	} 
 ////---- city 
 	
 	@Given("Admin click the city menu button")
@@ -321,10 +328,11 @@ public class Admin_Step_def extends Base_Class {
 	@Then("Admin able to view and delete the city")
 	public void admin_able_to_view_and_delete_the_city() {
 	    clicktheelement(al.getDeletecity());
-	}
+	}  
+	
 	///vechile
 	
-	@Given("Admin click the Vehicle menu button")
+	 @Given("Admin click the Vehicle menu button")
 	public void admin_click_the_vehicle_menu_button() {
 		waitimplicit();
 		clicktheelement(al.getVechilemenubutton());
@@ -356,11 +364,11 @@ public class Admin_Step_def extends Base_Class {
 	@Then("Admin click completed button to see SOS requests")
 	public void admin_click_completed_button_to_see_sos_requests() {
 		clicktheelement(al.getCompletedsos());
-	}
+	} 
 	
 	////add sos
 	
-	@Given("Admin click the add SOS service button")
+	 @Given("Admin click the add SOS service button")
 	public void admin_click_the_add_sos_service_button() {
 		waitimplecit();
 		clicktheelement(al.getAddsos());
@@ -378,11 +386,11 @@ public class Admin_Step_def extends Base_Class {
 	public void admin_able_to_click_the_add_service_button_to_add_the_service() {
 		clicktheelement(al.getAddservicebutton());
 		
-	} */
+	} 
 	
 	///enquiry
 
-	/* @Given("Admin click the enquiry button")
+		 @Given("Admin click the enquiry button")
 	public void partner_click_the_enquiry_button() {
 		waitimplicit();
 		clicktheelement(al.getEnquirymenubutton());
@@ -398,11 +406,11 @@ public class Admin_Step_def extends Base_Class {
 	@Then("Admin able click the read button in enquiry page")
 	public void partnet_able_click_the_read_button_in_enquiry_page() {
 		clicktheelement(al.getAllreadenquiry());
-	} */
+	} 
 	
 	// customer
 	
-	/*@Given("Admin click the Customer button")
+			@Given("Admin click the Customer button")
 	public void admin_click_the_customer_button() {
 		waitimplicit();
 		clicktheelement(al.getCustomermenubutton());
@@ -426,11 +434,11 @@ public class Admin_Step_def extends Base_Class {
 	@Then("Admin click the view button to customer service hoistory details")
 	public void admin_click_the_view_button_to_customer_service_hoistory_details() {
 		clicktheelement(al.getFilterviewbutton());
-	} */
+	} 
 
 	/// settings
 	
-	/*@Given("Admin click the settings button")
+	@Given("Admin click the settings button")
 	public void admin_click_the_settings_button() {
 		waitimplicit();
 		clicktheelement(al.getSetingsmenu());
@@ -444,7 +452,7 @@ public class Admin_Step_def extends Base_Class {
 	public void admin_able_to_modify_the_first_name_field() {
 		al.getSettingmodifyfirstname().clear();
 		SendKeys(al.getSettingmodifyfirstname(), "Vijay");
-	
+			
 	}
 	@When("Admin able to modify the Last Name field")
 	public void admin_able_to_modify_the_last_name_field() {
@@ -459,11 +467,11 @@ public class Admin_Step_def extends Base_Class {
 	@Then("Admin click the update button to save the modification")
 	public void admin_click_the_update_button_to_save_the_modification() {
 		clicktheelement(al.getSettingeditupdate());
-	} */
-
+	} 
+	
 	///announcement
 	
-	/* @Given("Admin click the Announcement button")
+	 @Given("Admin click the Announcement button")
 	public void admin_click_the_announcement_button() {
 		waitimplicit();
 		clicktheelement(al.getAnnouncementmenu());
@@ -541,38 +549,23 @@ public class Admin_Step_def extends Base_Class {
 	@Then("Admin able click the unread button in notification page")
 	public void admin_able_click_the_unread_button_in_notification_page() {
 		clicktheelement(al.getUnreadnotification());
-	} */
+	} 
 	
 	///Logout
 	
-	@Given("Admin click the logout option on the top of the right corner")
-	public void partner_click_the_logout_option_on_the_top_of_the_right_corner() throws InterruptedException {
-		clicktheelement(al.getLogoutmenu());
+	 @Given("Admin click the logout option on the top of the right corner")
+	public void partner_click_the_logout_option_on_the_top_of_the_right_corner(){
+		waitimplicit();
+		
+		Actions(al.getLogoutmenu());
 	}
 	@When("Admin click the logout button")
 	public void admin_click_the_logout_button() {
-		clicktheelement(al.getLogoutbutton());
+		waitimplicit();
+		Actions(al.getLogoutbutton());
 	}
 	@Then("Admin able to click the ok button on the logout page")
 	public void partnet_able_to_click_the_ok_button_on_the_logout_page() {
 		clicktheelement(al.getConfirmlogout());
-	}
-
-
-
-	
-
-
-
-
-
-
-
-	
-	
-	
-	
-
-
-
+	} 
 }

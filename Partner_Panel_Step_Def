@@ -1,5 +1,8 @@
 package com.Step_Definition;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
 import com.Base_Class.Base_Class;
 import com.Pom_Class.Login;
 
@@ -21,12 +24,12 @@ public class Step_Def extends Base_Class{
 	@When("Partner enter the email id in email id field")
 	public void partner_enter_the_email_id_in_email_id_field() {
 		
-		SendKeys(lg.getEmail(), "pqrs@gmail.com");
+		SendKeys(lg.getEmail(), "email123@gmail.com");
 	    
 	}
 	@When("Partner enter the password in password field")
 	public void partner_enter_the_password_in_password_field() {
-		SendKeys(lg.getPassword(), "Pqrs@123");
+		SendKeys(lg.getPassword(), "Admin@123");
 	    
 	}
 	@Then("Partner click the login button")
@@ -36,7 +39,7 @@ public class Step_Def extends Base_Class{
 	
 	////Partner in Spare Parts Page
 
-/*	@Given("the user is on the Home page")
+	 @Given("the user is on the Home page")
 	public void the_user_is_on_the_home_page() {
 		System.out.println("Partner in home page");
 		
@@ -56,34 +59,35 @@ public class Step_Def extends Base_Class{
 	public void the_list_of_available_spare_parts_should_be_displayed() {
 		Isdisplayed(lg.getDetails());
 	    
-	} */
+	} 
 	
 	/// Partner in spare parts page in add category funtion
 
-	/*	@Given("Partner able to click the \"Add Catagory\"button")
+	@Given("Partner able to click the \"Add Catagory\"button")
 	public void partner_able_to_click_the_add_catagory_button() {
 		clicktheelement(lg.getAddcategory1());
 	    
 	}
 	@When("Partner enter the product Catagory in catagory field")
 	public void partner_enter_the_product_catagory_in_catagory_field() {
-		SendKeys(lg.getInputuproduct(), "kia");
+		SendKeys(lg.getInputuproduct(), "Offer");
 	    
 	}
 	@Then("Partner click the \"Add Catagory\"to added the product suessfully")
 	public void partner_click_the_add_catagory_to_added_the_product_suessfully() {
 		clicktheelement(lg.getAddcategory2());
 	    
-	}  */
+	}  
 	
 	//-------- Partner in Add new product page in spare parts
 	
- /*	@Given("Partner able to click the {string} button")
+ 	@Given("Partner able to click the {string} button")
 	public void partner_able_to_click_the_button(String string) {
-		clicktheelement(lg.getAddnewproduct());
+		Actions(lg.getAddnewproduct());
 	}
 	@When("Partner enter the {string} in product name field")
-	public void partner_enter_the_in_product_name_field(String string) {
+	public void partner_enter_the_in_product_name_field(String string) throws InterruptedException {
+		Thread.sleep(2000);
 		SendKeys(lg.getProductname(), "Light");
 	}
 	@When("Partner enter the {string} in image url field")
@@ -122,14 +126,14 @@ public class Step_Def extends Base_Class{
 	public void partner_click_the_button(String string) {
 		clicktheelement(lg.getAddproduct());
 	    
-	}  */
+	}  
 	
 	///----Partner in Job card element
 	
-	/*	@Given("Partner able to click the Jobcards button")
+		@Given("Partner able to click the Jobcards button")
 	public void partner_able_to_click_the_jobcards_button() {
 		waitimplecit();
-		clicktheelement(lg.getJobcards());
+		Actions(lg.getJobcards());
 	}
 	@When("Partner scrollup to see the jobcards details")
 	public void partner_scrollup_to_see_the_jobcards_details() {
@@ -142,26 +146,26 @@ public class Step_Def extends Base_Class{
 	@Then("Patner scrollup to see the completed booking details")
 	public void patner_scrollup_to_see_the_completed_booking_details() {
 		Scrollup();
-	} */
+	} 
 
 	//----// Partner in Service request page
 	
- /*	@Given("Partner click the service request button")
+ 	@Given("Partner click the service request button")
 	public void partner_click_the_service_request_button() {
 		waitimplicit();
-		clicktheelement(lg.getService());
+		Actions(lg.getService());
 	}
 	@Then("Partner scrollup the page and see the service request details")
 	public void partner_scrollup_the_page_and_see_the_service_request_details() {
 		Scrollup();
-	} */
+	} 
 	
 	////== Partner in service category page (add category)
 	
-	/* @Given("Partner able to click the service catalog page button")
+	 @Given("Partner able to click the service catalog page button")
 	public void partner_able_to_click_the_service_catalog_page_button() {
 		waitimplecit();
-		clicktheelement(lg.getServiceCat());
+		Actions(lg.getServiceCat());
 	}
 	@When("Partner able to click the add category button")
 	public void partner_able_to_click_the_add_category_button() {
@@ -169,27 +173,28 @@ public class Step_Def extends Base_Class{
 	}
 	@When("Partner enter the category name in category field")
 	public void partner_enter_the_category_name_in_category_field() {
-		SendKeys(lg.getCatname(), "heavy");
+		SendKeys(lg.getCatname(), "Services");
 	}
 	@When("Partner able to select the checkbox")
 	public void partner_able_to_select_the_checkbox() {
-		clicktheelement(lg.getCheckbox());
+		clickCheckBox(lg.getCheckbox());
 	}
 	@Then("Partner click the Add Catagoryto added the product suessfully")
 	public void partner_click_the_add_catagoryto_added_the_product_suessfully() {
-		clicktheelement(lg.getAddcatbutton());
-	}  */
+		waitimplicit();
+		Actions(lg.getAddcatbutton());
+	}  
 
 	////Add service in service catalog 
 	
-	/* @Given("Partner click the add service click button")
+	 @Given("Partner click the add service click button")
 	public void partner_click_the_add_service_click_button() {
-		waitimplecit();
-		clicktheelement(lg.getAddservicebutton());
+		Actions(lg.getAddservicebutton());
 	}
 	@When("Partner enter the serive name im serive name field")
-	public void partner_enter_the_serive_name_im_serive_name_field() {
-		SendKeys(lg.getSername(), "body");
+	public void partner_enter_the_serive_name_im_serive_name_field() throws InterruptedException {
+		Thread.sleep(2000);
+		SendKeys(lg.getSername(), "oil");
 	}
 	@When("Partner enter the price of the product in price field")
 	public void partner_enter_the_price_of_the_product_in_price_field() {
@@ -203,6 +208,7 @@ public class Step_Def extends Base_Class{
 	@When("Partner able to select the select")
 	public void partner_able_to_select_the_select() {
 		waitimplecit();
+		Actions(lg.getSercategory());
 		selecttheindex(lg.getSercategory(), 0);
 
 	}
@@ -217,33 +223,34 @@ public class Step_Def extends Base_Class{
 	@Then("Partner able to click the add service button")
 	public void partner_able_to_click_the_add_service_button() {
 		clicktheelement(lg.getAddserbutton());
-	} */
-	
+	} 
+	 
 	////---------// Billing
 	
-	/* @Given("Partner able to click the billing button")
+	 @Given("Partner able to click the billing button")
 	public void partner_able_to_click_the_billing_button() {
 		waitimplecit();
-		clicktheelement(lg.getBilling());
+		Actions(lg.getBilling());
 	}
 	@When("Parter scrollup to see the billing details")
 	public void parter_scrollup_to_see_the_billing_details() {
 		Scrollup();
 	}
 	@When("Partner able to click the billing histoy button")
-	public void partner_able_to_click_the_billing_histoy_button() {
-		clicktheelement(lg.getBillinghistory());
+	public void partner_able_to_click_the_billing_histoy_button() throws InterruptedException {
+		Thread.sleep(3000);
+		Actions(lg.getBillinghistory());
 	}
 	@Then("Parter scrollup to see the history details")
 	public void parter_scrollup_to_see_the_history_details() {
 		Scrollup();
-	} */
+	} 
 	
  ///-----------// Settings
-	@Given("Partner able click the setting button")
+	 @Given("Partner able click the setting button")
 	public void partner_able_click_the_setting_button() {
 		waitimplecit();
-		clicktheelement(lg.getSettings());
+		Actions(lg.getSettings());
 	}
 	@When("Partner scroll to see the settings details")
 	public void partner_scroll_to_see_the_settings_details() {
@@ -257,13 +264,13 @@ public class Step_Def extends Base_Class{
 	public void partner_scrollup_to_see_the_profile_setting_details() {
 		Scrollupanddown(lg.getScrollend());
 		
-	}
+	}  
 	///------------// Announcement
 	
 	@Given("Partner click the announcement button")
 	public void partner_click_the_announcement_button() {
 		waitimplecit();
-		clicktheelement(lg.getAnnouncement());
+		Actions(lg.getAnnouncement());
 	}
 	@When("Partner able to click the All button in announcement page")
 	public void partner_able_to_click_the_all_button_in_announcement_page() {
@@ -288,7 +295,7 @@ public class Step_Def extends Base_Class{
 	@Given("Partner able to click the enquiry button")
 	public void partner_able_to_click_the_enquiry_button() {
 		waitimplecit();
-		clicktheelement(lg.getEnquirybutton());
+		Actions(lg.getEnquirybutton());
 	}
 	@When("Partner enter the name in enquiry field")
 	public void partner_enter_the_name_in_enquiry_field() {
@@ -312,7 +319,7 @@ public class Step_Def extends Base_Class{
 	@Given("partner click the notificaion button")
 	public void partner_click_the_notificaion_button() {
 		waitimplecit();
-		clicktheelement(lg.getNotificationbutton());
+		Actions(lg.getNotificationbutton());
 	}
 	@When("partnet able click the all button in notification page")
 	public void partnet_able_click_the_all_button_in_notification_page() {
@@ -334,19 +341,24 @@ public class Step_Def extends Base_Class{
 	public void partner_scrollup_see_the_avilable_read_notification() {
 		Scrollup();
 	} 
-	
+	 
 	////logout
 
- /*	@Given("Partner click the logout button on the top of the right corner")
-	public void partner_click_the_logout_button_on_the_top_of_the_right_corner() {
+ 	@Given("Partner click the logout option on the top of the right corner")
+	public void partner_click_the_logout_option_on_the_top_of_the_right_corner() {
 		waitimplicit();
-		clicktheelement(lg.getLogoutbutton());
-	}	
-	@Then("partnet able to click the ok button on the logout page")
-	public void partnet_able_to_click_the_ok_button_on_the_logout_page() {
-		clicktheelement(lg.getLogout_ok());
-		
-	}  */
+		Actions(lg.getLogoutoption());
+	}
+	@When("Partner able to click the logout button inside the profile")
+	public void partner_able_to_click_the_logout_button_inside_the_profile() {
+		Actions(lg.getLogoutbutton());
+	    
+	}
+	@Then("partnet able to click the ok button to logout the application")
+	public void partnet_able_to_click_the_ok_button_to_logout_the_application() {
+		Actions(lg.getLogoutok());
+	    
+	}
 	
 
 	

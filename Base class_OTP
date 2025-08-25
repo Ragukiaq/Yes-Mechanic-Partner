@@ -14,6 +14,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -258,10 +259,49 @@ public class Base_Class {
 		        box.sendKeys(String.valueOf(otp.charAt(i)));
 		    }
 
-		    System.out.println("✅ OTP entered successfully: " + otp);
-		} 
+		    System.out.println("OTP entered successfully: " + otp);
+		}
+
+
+		private FluentWait<WebDriver> wait;
 		
 		
+		public void safeClick(WebElement webElement) {
+		    WebDriverWait wait = new WebDriverWait(driver, 10);
+		    WebElement element = wait.until(ExpectedConditions.elementToBeClickable(webElement));
+		    try {
+		        element.click();
+		    } catch (Exception e) {
+		        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+		    }
+		}
+		
+		public void clickCheckBox(WebElement webElement) {
+		    WebDriverWait wait = new WebDriverWait(driver, 10);
+		    WebElement checkbox = wait.until(ExpectedConditions.elementToBeClickable(webElement));
+
+		    // Check if not already selected
+		    if (!checkbox.isSelected()) {
+		        checkbox.click();
+		    }
+		}
+		
+		
+		public static void Actions_Moveto_Ele(WebElement webElement) {
+			
+			WebElement profileName = driver.findElement(By.xpath("//span[normalize-space()='Technologies']"));
+
+			Actions actions = new Actions(driver);
+			actions.moveToElement(profileName).click().perform();
+
+			
+		}
+		
+		public void modifyField(By locator, String newValue) {
+	        WebElement field = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+	        field.clear();
+	        field.sendKeys(newValue);
+	    }
 		
 		
 		

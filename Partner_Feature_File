@@ -1,6 +1,4 @@
-Partner Panel:
-Feature File:
-    Feature: Verify the partner panel in Yes Mechanic application
+Feature: Verify the partner panel in Yes Mechanic application
 Scenario: Validate the login page in partner panel
 	Given Partner launch the application
 	When Partner enter the email id in email id field
@@ -93,14 +91,13 @@ Scenario: Partner validate the notification functionality
 
 
  Scenario: Partner validate the logout functionality
- 	Given Partner click the logout button on the top of the right corner
- 	Then partnet able to click the ok button on the logout page
-
+ 	Given Partner click the logout option on the top of the right corner
+ 	When Partner able to click the logout button inside the profile 
+ 	Then partnet able to click the ok button to logout the application
 
 
 	
 	
 	
-
 
 

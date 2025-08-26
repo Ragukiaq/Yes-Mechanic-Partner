@@ -132,6 +132,7 @@ public class Step_Def extends Base_Class{
 	
 		@Given("Partner able to click the Jobcards button")
 	public void partner_able_to_click_the_jobcards_button() {
+		navigateRefr();
 		waitimplecit();
 		Actions(lg.getJobcards());
 	}
@@ -141,6 +142,7 @@ public class Step_Def extends Base_Class{
 	}
 	@When("Partner able to click the history button")
 	public void partner_able_to_click_the_history_button() {
+		navigateRefr();
 		clicktheelement(lg.getHistory());
 	}
 	@Then("Patner scrollup to see the completed booking details")
@@ -173,7 +175,7 @@ public class Step_Def extends Base_Class{
 	}
 	@When("Partner enter the category name in category field")
 	public void partner_enter_the_category_name_in_category_field() {
-		SendKeys(lg.getCatname(), "Services");
+		SendKeys(lg.getCatname(), "Freeservice");
 	}
 	@When("Partner able to select the checkbox")
 	public void partner_able_to_select_the_checkbox() {
@@ -189,6 +191,7 @@ public class Step_Def extends Base_Class{
 	
 	 @Given("Partner click the add service click button")
 	public void partner_click_the_add_service_click_button() {
+		navigateRefr();
 		Actions(lg.getAddservicebutton());
 	}
 	@When("Partner enter the serive name im serive name field")
@@ -208,9 +211,7 @@ public class Step_Def extends Base_Class{
 	@When("Partner able to select the select")
 	public void partner_able_to_select_the_select() {
 		waitimplecit();
-		Actions(lg.getSercategory());
 		selecttheindex(lg.getSercategory(), 0);
-
 	}
 	@When("Partner enter the service description in description page")
 	public void partner_enter_the_service_description_in_description_page() {
@@ -346,6 +347,7 @@ public class Step_Def extends Base_Class{
 
  	@Given("Partner click the logout option on the top of the right corner")
 	public void partner_click_the_logout_option_on_the_top_of_the_right_corner() {
+ 		navigateRefr();
 		waitimplicit();
 		Actions(lg.getLogoutoption());
 	}

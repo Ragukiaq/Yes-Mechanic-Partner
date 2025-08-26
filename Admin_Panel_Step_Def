@@ -27,7 +27,7 @@ public class Admin_Step_def extends Base_Class {
 	
 	//////----- servoice request
 	
-	 @Given("Admin click the service request button")
+	/* @Given("Admin click the service request button")
 	public void admin_click_the_service_request_button() {
 		waitimplecit();
 		clicktheelement(al.getSerreqbut());
@@ -95,7 +95,7 @@ public class Admin_Step_def extends Base_Class {
 	public void admin_click_the_back_to_schedule_request_button_on_orders_page() {
 		clicktheelement(al.getBackinorder());
 
-	} 
+	} */
 
 	//////////---Partnerr
 	
@@ -123,7 +123,9 @@ public class Admin_Step_def extends Base_Class {
 	
 	 @Given("Admin click the Add button on partners page")
 	public void admin_click_the_add_button_on_partners_page() {
-		Actions(al.getAddpartnerbutton());	    
+		 navigateRefr();
+		 waitimplecit();
+		 clicktheelement(al.getAddpartnerbutton());	    
 	}
 	@When("Admin able to enter the partner first name in first name field")
 	public void admin_able_to_enter_the_partner_first_name_in_first_name_field()throws InterruptedException {
@@ -212,8 +214,8 @@ public class Admin_Step_def extends Base_Class {
 	
 	 @Given("Admin click the view button on the partner page")
 	public void admin_click_the_view_button_on_the_partner_page() {
-		 waitimplicit();
-		clicktheelement(al.getViewbuttonformodify());
+		waitimplicit();
+		Actions(al.getViewbuttonformodify());
 	    
 	}
 	@When("Admin click the edit profile button in the parts page")
@@ -223,46 +225,49 @@ public class Admin_Step_def extends Base_Class {
 	}
 	@When("Admin able to modify the partner first name in first name field")
 	public void admin_able_to_modify_the_partner_first_name_in_first_name_field() {
-		SendKeys(al.getModifyfirstname(), "D");
-	    
+		
+		clearField(al.getModifyfirstname());
+		SendKeys(al.getModifyfirstname(), "ABC");
 	}
-
 
 	@When("Admin able to modify the partner last name in last name field")
 	public void admin_able_to_modify_the_partner_last_name_in_last_name_field() {
-		al.getModifylastname().clear();
+		clearField(al.getModifylastname());
 		SendKeys(al.getModifylastname(),"MN");
 			    
 	}
 	@When("Admin able to modify the company name in company name field")
 	public void admin_able_to_modify_the_company_name_in_company_name_field() {
+		clearField(al.getModifycompanyname());
 		SendKeys(al.getModifycompanyname(), "ABCABC");
 	    
 	}
 	@When("Admin able to modify the address in address field1")
 	public void admin_able_to_modify_the_address_in_address_field1() {
-	    al.getModifyaddress1().clear();
-	    SendKeys(al.getModifyaddress1(), ",OMR");
+		clearField(al.getModifyaddress1());
+	    SendKeys(al.getModifyaddress1(), "OMR");
 	}
 	@When("Admin able to modify the address in address field2")
 	public void admin_able_to_modify_the_address_in_address_field2() {
+		clearField(al.getModifyaddress2());
 		SendKeys(al.getModifyaddress2(), "Vellor");
 	    
 	}
 	@When("Admin able to modify the PAN Card in pan card field")
 	public void admin_able_to_modify_the_pan_card_in_pan_card_field() {
+		clearField(al.getModifypan());
 		SendKeys(al.getModifypan(), "ABCDE1234F");
 	    
 	}
 	@When("Admin able to modify the GST No in gst number field")
 	public void admin_able_to_modify_the_gst_no_in_gst_number_field() {
-		Actions(al.getModifygst());
-		al.getModifygst().clear();
+		clearField(al.getModifygst());
 		SendKeys(al.getModifygst(), "ABCDE1234F");
 	    
 	}
 	@When("Admin able to modify the Registration No in registration No field")
 	public void admin_able_to_modify_the_registration_no_in_registration_no_field() {
+		clearField(al.getModifyregnum());
 		SendKeys(al.getModifyregnum(), "DL01AB1234");
 	    
 	}
@@ -279,7 +284,7 @@ public class Admin_Step_def extends Base_Class {
 	
 	///// job cards
 	
-	  @Given("Admin click the jobs cards menu button")
+	/*  @Given("Admin click the jobs cards menu button")
 	public void admin_click_the_jobs_cards_menu_button() {
 		waitimplicit();
 		Actions(al.getJobscardsmenu());
@@ -567,5 +572,5 @@ public class Admin_Step_def extends Base_Class {
 	@Then("Admin able to click the ok button on the logout page")
 	public void partnet_able_to_click_the_ok_button_on_the_logout_page() {
 		clicktheelement(al.getConfirmlogout());
-	} 
+	}*/
 }

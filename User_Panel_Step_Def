@@ -220,6 +220,7 @@ public class User_step_def extends Base_Class {
 
  @Given("User click the enquiry menu button")
 public void user_click_the_enquiry_menu_button() {
+	 navigateRefr();
 	Actions(ul.getEnquirymenu());
 }
 @When("User able to enter the car model in car model field")
@@ -252,6 +253,7 @@ public void user_able_to_click_the_submit_button() {
 
  @Given("User click the notificaion menu")
 public void user_click_the_notificaion_menu() {
+	 navigateRefr();
 	Actions(ul.getNotificationmenu());
 }
 @When("User able to click view all notification button")
@@ -375,6 +377,7 @@ public void user_click_the_terms_condition_button_in_settings_page() {
 
 @Given("User click the Profile button on the top of th eright corner2")
 public void user_click_the_profile_button_on_the_top_of_th_eright_corner2() {
+	navigateRefr();
 	Actions(ul.getProfilelog());
     
 }

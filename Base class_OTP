@@ -9,6 +9,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -86,13 +87,24 @@ public class Base_Class {
 			driver.switchTo().alert().sendKeys(S);
 		}
 	    
-		public static void ClicktheElement(WebElement sr1)
-		{
+		public static void ClicktheElement(WebElement sr1){
 			sr1.click();
 	}
+		
+		public void modifyField(WebElement element, String value) {
+	        element.clear();
+	        element.sendKeys(value);
+	        System.out.println("✅ Field modified with value: " + value);
+	    }
+		
 		public static void actionscontet() {
 			Actions act = new Actions(driver);
 			act.contextClick();
+		}
+		
+		public void clearField(WebElement element) {
+		    element.sendKeys(Keys.CONTROL + "a"); // select all text
+		    element.sendKeys(Keys.DELETE);        // delete
 		}
 
 		
@@ -261,9 +273,6 @@ public class Base_Class {
 
 		    System.out.println("OTP entered successfully: " + otp);
 		}
-
-
-		private FluentWait<WebDriver> wait;
 		
 		
 		public void safeClick(WebElement webElement) {
@@ -297,11 +306,7 @@ public class Base_Class {
 			
 		}
 		
-		public void modifyField(By locator, String newValue) {
-	        WebElement field = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-	        field.clear();
-	        field.sendKeys(newValue);
-	    }
+
 		
 		
 		

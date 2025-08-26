@@ -27,7 +27,7 @@ public class Admin_Step_def extends Base_Class {
 	
 	//////----- servoice request
 	
-	/* @Given("Admin click the service request button")
+	 @Given("Admin click the service request button")
 	public void admin_click_the_service_request_button() {
 		waitimplecit();
 		clicktheelement(al.getSerreqbut());
@@ -95,7 +95,7 @@ public class Admin_Step_def extends Base_Class {
 	public void admin_click_the_back_to_schedule_request_button_on_orders_page() {
 		clicktheelement(al.getBackinorder());
 
-	} */
+	} 
 
 	//////////---Partnerr
 	
@@ -284,8 +284,9 @@ public class Admin_Step_def extends Base_Class {
 	
 	///// job cards
 	
-	/*  @Given("Admin click the jobs cards menu button")
+	  @Given("Admin click the jobs cards menu button")
 	public void admin_click_the_jobs_cards_menu_button() {
+		navigateRefr();
 		waitimplicit();
 		Actions(al.getJobscardsmenu());
 		
@@ -454,19 +455,19 @@ public class Admin_Step_def extends Base_Class {
 		clicktheelement(al.getSettinsedit());
 	}
 	@When("Admin able to modify the First Name field")
-	public void admin_able_to_modify_the_first_name_field() {
-		al.getSettingmodifyfirstname().clear();
+	public void admin_able_to_modify_the_first_name_field() {		
+		clearField(al.getSettingmodifyfirstname());
 		SendKeys(al.getSettingmodifyfirstname(), "Vijay");
 			
 	}
 	@When("Admin able to modify the Last Name field")
 	public void admin_able_to_modify_the_last_name_field() {
-		al.getSettingmodifylastname().clear();
+		clearField(al.getSettingmodifylastname());
 		SendKeys(al.getSettingmodifylastname(), "QATester");
 	}
 	@When("Admin able to modify the Email field")
 	public void admin_able_to_modify_the_email_field() {
-		al.getSettingmodifyemail().clear();
+		clearField(al.getSettingmodifyemail());
 		SendKeys(al.getSettingmodifyemail(), "admin@gmail.com");
 	}
 	@Then("Admin click the update button to save the modification")
@@ -560,8 +561,8 @@ public class Admin_Step_def extends Base_Class {
 	
 	 @Given("Admin click the logout option on the top of the right corner")
 	public void partner_click_the_logout_option_on_the_top_of_the_right_corner(){
+		navigateRefr();
 		waitimplicit();
-		
 		Actions(al.getLogoutmenu());
 	}
 	@When("Admin click the logout button")
@@ -572,5 +573,5 @@ public class Admin_Step_def extends Base_Class {
 	@Then("Admin able to click the ok button on the logout page")
 	public void partnet_able_to_click_the_ok_button_on_the_logout_page() {
 		clicktheelement(al.getConfirmlogout());
-	}*/
+	}
 }
